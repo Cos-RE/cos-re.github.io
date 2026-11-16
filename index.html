@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%2323282f%22/%3E%3Cg%20fill%3D%22%23fff%22%20stroke%3D%22%2323282f%22%20stroke-width%3D%222.2%22%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2218%22%20rx%3D%227.5%22%20ry%3D%2211%22/%3E%3Cellipse%20cx%3D%2222.5%22%20cy%3D%2244%22%20rx%3D%226.5%22%20ry%3D%2211%22%20transform%3D%22rotate%2832%2022.5%2044%29%22/%3E%3Cellipse%20cx%3D%2241.5%22%20cy%3D%2244%22%20rx%3D%226.5%22%20ry%3D%2211%22%20transform%3D%22rotate%28-32%2041.5%2044%29%22/%3E%3Cellipse%20cx%3D%2219%22%20cy%3D%2231%22%20rx%3D%2212%22%20ry%3D%2210%22/%3E%3Cellipse%20cx%3D%2245%22%20cy%3D%2231%22%20rx%3D%2212%22%20ry%3D%2210%22/%3E%3C/g%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2234%22%20r%3D%225.5%22%20fill%3D%22%23de9db7%22%20stroke%3D%22%2323282f%22%20stroke-width%3D%221.5%22/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="theme-color" content="#23282f">
+<title>Production Planner Wireframe</title>
+<meta name="" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a framed app shell (sidebar, top bar, scrolling content) on a grey canvas, with a yellow sticky note
+   for the test task. One light wireframe palette on purpose, so every tester sees exactly the same screens. */
+:root{
+  color-scheme: light;
+  --canvas:#e6e8eb; --surface:#ffffff; --sunken:#f5f6f7; --fill:#e4e7ea; --fill-2:#d2d6db;
+  --line:#d3d7dc; --line-2:#99a0a8; --ink:#1c2025; --muted:#59606a; --faint:#878e97;
+  --act:#23282f; --act-hover:#3b424c; --act-ink:#ffffff;
+  --err:#b42318; --err-bg:#fdedeb; --err-line:#e7b4ae;
+  --note:#fff3a8; --note-line:#e3cd62; --note-ink:#3a3412;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --r:6px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--canvas);color:var(--ink);font:14px/1.45 var(--sans);
+  padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+#app{height:100%}
+h1,h2,h3{margin:0;text-wrap:balance}
+h1{font-size:21px;font-weight:600;letter-spacing:-.01em}
+h2{font-size:16px;font-weight:600}
+h3{font-size:14px;font-weight:600}
+p{margin:0}
+.mono{font-family:var(--mono)}
+.hint{color:var(--muted);font-size:12.5px}
+.msg{color:var(--err);font-size:12.5px}
+.msg:empty{display:none}
+.lbl{font-weight:500;font-size:13px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.spacer{flex:1}
+.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* buttons and inputs */
+.btn{font:inherit;font-weight:500;font-size:13.5px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);
+  border-radius:var(--r);padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;line-height:1.2;white-space:nowrap}
+.btn:hover{background:var(--fill)}
+.btn.primary{background:var(--act);border-color:var(--act);color:var(--act-ink)}
+.btn.primary:hover{background:var(--act-hover)}
+.btn[disabled],.btn[disabled]:hover{opacity:.42;cursor:not-allowed;background:var(--surface);color:var(--ink)}
+.btn.primary[disabled],.btn.primary[disabled]:hover{background:var(--act);color:var(--act-ink)}
+.btn.ghost{border-color:transparent;background:transparent}
+.btn.ghost:hover{background:var(--fill)}
+.btn.sm{padding:4px 9px;font-size:12.5px}
+.btn.danger{color:var(--err);border-color:var(--err-line)}
+.btn.wide{width:100%}
+.linkbtn{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-weight:600}
+:focus-visible{outline:2px solid var(--act);outline-offset:2px}
+.in{font:inherit;font-size:14px;border:1px solid var(--line-2);border-radius:var(--r);padding:7px 10px;background:var(--surface);color:var(--ink);min-width:0;width:100%}
+.in.sm{padding:4px 8px;font-size:13px;width:auto}
+.in.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.in.err{border-color:var(--err);background:var(--err-bg)}
+.in[disabled]{background:var(--fill);color:var(--faint)}
+select.in{padding-right:28px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field label{font-weight:500;font-size:13px}
+.check{display:inline-flex;align-items:center;gap:7px;cursor:pointer;font-size:13.5px}
+.check input{width:16px;height:16px;accent-color:var(--act);margin:0}
+.checks{display:flex;flex-wrap:wrap;gap:8px 18px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r)}
+.checks.err{border-color:var(--err);background:var(--err-bg)}
+.chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line-2);border-radius:999px;padding:1px 8px;font-size:12px;background:var(--surface);white-space:nowrap;line-height:1.5}
+.chip.dark{background:var(--act);border-color:var(--act);color:var(--act-ink)}
+.chip.err{color:var(--err);border-color:var(--err-line);background:var(--err-bg)}
+.chip.sm{font-size:11px;padding:0 6px}
+.sw{width:12px;height:12px;border-radius:50%;border:1px solid var(--line-2);display:inline-block;flex:none;vertical-align:-1px}
+.sw.spotty{background:radial-gradient(circle at 32% 34%,#8f80bd 0 1.6px,transparent 2px),radial-gradient(circle at 68% 66%,#8f80bd 0 1.6px,transparent 2px),#fff}
+
+/* shell */
+.shell{height:100%;display:grid;grid-template-columns:216px minmax(0,1fr);background:var(--surface);border:1px solid var(--line-2);border-radius:10px;overflow:hidden}
+.side{border-right:1px solid var(--line);display:flex;flex-direction:column;padding:14px 10px;gap:14px;overflow:auto;background:var(--surface)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:600;padding:2px 6px}
+.logo{width:28px;height:28px;border:1.5px solid var(--ink);border-radius:5px;display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:500}
+.menu{display:flex;flex-direction:column;gap:2px}
+.mi{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:var(--r);cursor:pointer;color:var(--muted);font-weight:500}
+.mi:hover{background:var(--sunken);color:var(--ink)}
+.mi.on{background:var(--fill);color:var(--ink)}
+.mi:focus-visible{outline:2px solid var(--act)}
+.main{display:flex;flex-direction:column;min-width:0;min-height:0}
+.top{flex:none;min-height:54px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:8px 20px;flex-wrap:wrap}
+.crumb{font-weight:600}
+.who{display:flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap}
+.today{font-size:12px;color:var(--muted);padding-right:8px;border-right:1px solid var(--line)}
+.content{flex:1;overflow:auto;padding:22px 24px 140px;background:var(--sunken);min-width:0}
+.ph{display:flex;align-items:flex-end;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;margin-bottom:16px}
+.ph .hint{margin-top:3px;max-width:68ch}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;min-width:0}
+.panel-h{padding:13px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px 12px;justify-content:space-between;flex-wrap:wrap}
+.panel-b{padding:16px;display:flex;flex-direction:column;gap:14px}
+.panel-f{padding:12px 16px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+.toolbar{display:flex;align-items:center;gap:10px 12px;flex-wrap:wrap;margin-bottom:14px}
+.inl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.banner{display:flex;align-items:flex-start;gap:12px 16px;padding:11px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);margin-bottom:14px;flex-wrap:wrap}
+.banner > div{flex:1;min-width:220px}
+.banner.info{border-style:dashed;background:var(--sunken)}
+.banner.err{border-color:var(--err-line);background:var(--err-bg);color:var(--err)}
+.banner ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:3px}
+.flag{color:var(--err);font-size:12px;font-weight:500;line-height:1.35}
+.scroll-x{overflow-x:auto}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th{text-align:left;font-weight:500;color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl td{padding:8px 10px;border-bottom:1px solid var(--fill);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tr.click{cursor:pointer}
+.tbl tr.click:hover td{background:var(--sunken)}
+.tbl tr.sel td{background:var(--fill)}
+.tbl tr.flash td{animation:flash 2.4s ease-out}
+.tbl tr.off td{color:var(--faint)}
+.tbl .n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.tbl th.n{font-family:var(--sans)}
+.tbl td.sub{background:var(--sunken);padding:4px 10px 10px 34px}
+.tbl tr.err td{color:var(--err)}
+@keyframes flash{0%,35%{background:var(--note)}100%{background:transparent}}
+@media (prefers-reduced-motion:reduce){.tbl tr.flash td{animation:none;background:var(--note)}}
+
+/* calendar */
+.board{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;align-items:stretch}
+.col{flex:0 0 226px;background:var(--surface);border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column}
+.col.now{border-color:var(--line-2)}
+.col.bad{border:2px solid var(--err)}
+.col-h{padding:10px 12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.col-t{display:flex;align-items:center;gap:6px;justify-content:space-between}
+.col-b{padding:8px;display:flex;flex-direction:column;gap:6px;flex:1;min-height:180px}
+.col-f{border-top:1px solid var(--line);padding:9px 10px;display:flex;flex-direction:column;gap:7px;background:var(--sunken);border-radius:0 0 8px 8px}
+.act{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:6px;padding:7px 9px;background:var(--surface);cursor:pointer;font-size:12.5px;line-height:1.35}
+.act:hover{border-color:var(--line-2);background:var(--sunken)}
+.act:focus-visible{outline:2px solid var(--act);outline-offset:1px}
+.act.moved{border-style:dashed}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--muted)}
+.act-t{font-weight:600}
+.act-w{color:var(--muted);font-size:11.5px}
+.use{display:flex;flex-direction:column;gap:3px;font-size:12px}
+.use-t{display:flex;justify-content:space-between;gap:8px}
+.bar{height:6px;background:var(--fill);border-radius:3px;overflow:hidden}
+.bar > i{display:block;height:100%;background:var(--line-2)}
+.bar.over > i{background:var(--err)}
+.empty{padding:10px 4px;text-align:center}
+
+/* targets */
+.strip{display:flex;gap:8px;overflow-x:auto;padding:3px 3px 12px;scroll-snap-type:x proximity}
+.wk{all:unset;box-sizing:border-box;flex:0 0 128px;border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:10px;cursor:pointer;
+  display:flex;flex-direction:column;gap:5px;min-height:112px;scroll-snap-align:start}
+.wk:hover{border-color:var(--line-2)}
+.wk:focus-visible{outline:2px solid var(--act);outline-offset:1px}
+.wk.empty{border-style:dashed;background:var(--sunken)}
+.wk.sel{border:2px solid var(--act);padding:9px;background:var(--surface)}
+.wk.flashy{animation:flashbox 2.4s ease-out}
+@keyframes flashbox{0%,35%{background:var(--note)}100%{}}
+.wk-t{display:flex;align-items:center;justify-content:space-between;gap:4px}
+.wk-n{font-family:var(--mono);font-size:15px;font-weight:500;margin-top:auto}
+.wk-none{color:var(--faint);font-size:12.5px;margin-top:auto}
+.mixbar{display:flex;height:8px;border-radius:2px;overflow:hidden;background:var(--fill);gap:1px}
+.mixbar > i{display:block;height:100%;border:0}
+.mixbar.big{height:14px;border:1px solid var(--line-2);gap:0}
+.mixbar.big > i{border-right:1px solid var(--line-2)}
+.period{display:flex;align-items:center;gap:6px;font-size:13px}
+.period .in{width:62px;text-align:center}
+.mixrow{display:grid;grid-template-columns:minmax(120px,170px) 108px minmax(110px,1fr) auto;align-items:center;gap:10px 14px;padding:9px 0;border-bottom:1px solid var(--fill)}
+.mixrow:last-child{border-bottom:0}
+.pct{display:flex;align-items:center;gap:6px}
+.pct .in{width:70px}
+.cname{display:flex;align-items:center;gap:8px;font-weight:500}
+.sumline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.status{font-weight:500}
+.status.bad{color:var(--err)}
+
+/* varieties + gardens */
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.chart .in{width:74px}
+.chart td,.chart th{padding:6px 8px}
+.chart .na{color:var(--faint);font-size:12px}
+.gardens{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:16px;align-items:start}
+.phs{display:flex;flex-wrap:wrap;gap:4px}
+.inlineform{border:1px dashed var(--line-2);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:12px;background:var(--sunken)}
+
+/* weekly actions */
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden}
+.seg button{font:inherit;font-size:13px;font-weight:500;border:0;background:var(--surface);padding:6px 12px;cursor:pointer;color:var(--muted)}
+.seg button + button{border-left:1px solid var(--line-2)}
+.seg button.on{background:var(--act);color:var(--act-ink)}
+.days{display:flex;flex-direction:column;gap:10px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.day.today{border:2px solid var(--act)}
+.day.past .day-g{opacity:.72}
+.day-h{display:flex;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid var(--line)}
+.day-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.dg{padding:10px 14px;display:flex;flex-direction:column;gap:7px;min-width:0}
+.dg + .dg{border-left:1px solid var(--fill)}
+.wa{border-left:3px solid var(--line-2);padding:2px 0 2px 9px}
+
+/* overlays */
+.backdrop{position:fixed;inset:0;background:rgba(24,28,33,.32);z-index:30;display:flex}
+.drawer-wrap{justify-content:flex-end}
+.drawer{width:min(500px,100%);height:100%;background:var(--surface);border-left:1px solid var(--line-2);display:flex;flex-direction:column;box-shadow:-10px 0 28px rgba(0,0,0,.14);
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer-h{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.drawer-b{padding:16px 20px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:16px}
+.drawer-f{padding:12px 20px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
+.modal-wrap{z-index:60;align-items:center;justify-content:center;padding:16px}
+.modal{width:min(520px,100%);max-height:calc(100% - 32px);background:var(--surface);border:1px solid var(--line-2);border-radius:10px;display:flex;flex-direction:column;box-shadow:0 18px 50px rgba(0,0,0,.2)}
+.modal .drawer-b{gap:12px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13.5px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+.confirm{border:1px dashed var(--line-2);background:var(--sunken);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.toast{position:fixed;top:calc(26px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:70;background:var(--act);color:var(--act-ink);
+  padding:10px 16px 10px 12px;border-radius:8px;display:flex;align-items:center;gap:9px;font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,.22);max-width:calc(100% - 32px)}
+.toast .ic{stroke-width:2}
+
+/* login, intro */
+.frame{height:100%;background:var(--surface);border:1px solid var(--line-2);border-radius:10px;overflow:auto;display:grid;place-items:center;padding:24px 16px}
+.login{width:min(380px,100%);display:flex;flex-direction:column;gap:14px}
+.login h1{margin-top:6px}
+.intro{width:min(660px,100%);display:flex;flex-direction:column;gap:16px;padding-block:12px}
+.intro h1{font-size:28px;line-height:1.15}
+.intro p{max-width:62ch}
+.intro ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:62ch}
+.intro .row{display:flex;gap:10px;flex-wrap:wrap}
+details.fac{border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+details.fac summary{cursor:pointer;font-weight:500}
+.tasklist{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.tasklist li{display:flex;align-items:center;gap:10px;justify-content:space-between}
+
+/* sticky note: the test task */
+.note{position:fixed;left:calc(28px + env(safe-area-inset-left,0px));bottom:calc(28px + env(safe-area-inset-bottom,0px));width:312px;max-width:calc(100% - 56px);max-height:min(72vh,620px);overflow:auto;
+  background:var(--note);border:1px solid var(--note-line);color:var(--note-ink);border-radius:3px;box-shadow:0 8px 22px rgba(60,52,10,.22);padding:12px 14px 14px;z-index:50;
+  display:flex;flex-direction:column;gap:9px}
+.note h2{font-size:16px}
+.note p{font-size:13.5px}
+.note-h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.note .btn{border-color:var(--note-line);background:#fffbe0}
+.note .btn:hover{background:#fff6c2}
+.note .btn.primary{background:var(--act);border-color:var(--act);color:var(--act-ink)}
+.note-acts{display:flex;gap:8px;flex-wrap:wrap}
+.note table{border-collapse:collapse;font-size:12.5px;width:100%}
+.note td,.note th{padding:3px 6px;border-bottom:1px solid var(--note-line);text-align:left}
+.note th{font-weight:500}
+.note td.n{font-family:var(--mono);text-align:right}
+.note.min{width:auto;padding:8px 10px;flex-direction:row;align-items:center}
+.shell.tasking{grid-template-columns:332px minmax(0,1fr)}
+.note.docked{position:static;width:auto;max-width:none;max-height:none;overflow:visible;margin-top:auto;box-shadow:0 3px 10px rgba(60,52,10,.14);flex:none}
+.note.docked.min{justify-content:space-between}
+
+@media (max-width:860px){
+  html,body{height:auto}
+  #app,.shell,.frame{height:auto;min-height:calc(100vh - 32px)}
+  .shell{grid-template-columns:1fr}
+  .side{border-right:0;border-bottom:1px solid var(--line);flex-direction:row;flex-wrap:wrap;align-items:center}
+  .menu{flex-direction:row;flex-wrap:wrap}
+  .content{overflow:visible;padding:16px 14px 220px}
+  .split,.grid2{grid-template-columns:1fr}
+  .mixrow{grid-template-columns:1fr auto;}
+  .note{left:16px;right:16px;width:auto;max-width:none;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-height:46vh}
+  .shell.tasking{grid-template-columns:1fr}
+  .note.docked{flex-basis:100%;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="note"></div>
+<div id="overlay"></div>
+<div id="toast"></div>
+
+<script>
+"use strict";
+/* ------------------------------------------------------------------ helpers */
+const DAY = 864e5;
+const fmt = n => Number(n).toLocaleString("en-US");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const clone = o => JSON.parse(JSON.stringify(o));
+const range = (a, b) => Array.from({length: b - a + 1}, (_, i) => a + i);
+const digits = v => { const s = String(v ?? "").replace(/[^\d]/g, ""); return s === "" ? null : parseInt(s, 10); };
+const dec = v => { const s = String(v ?? "").trim().replace(",", ".").replace(/[^\d.]/g, ""); if (s === "" || s === ".") return null; const n = parseFloat(s); return isNaN(n) ? null : n; };
+const plural = (n, a, b) => n === 1 ? a : (b || a + "s");
+
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const DOWL = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const YEAR = 2027;
+const W1 = Date.UTC(2027, 0, 4);                 // Monday of ISO week 1, 2027
+const monday = w => new Date(W1 + (w - 1) * 7 * DAY);
+const TODAY = new Date(Date.UTC(2027, 0, 13));   // prototype "today": Wednesday of week 2
+const TODAY_WEEK = 2;
+const dow = d => (d.getUTCDay() + 6) % 7;
+const sameDay = (a, b) => +a === +b;
+const dm = d => d.getUTCDate() + " " + MON[d.getUTCMonth()];
+const ddm = d => DOW[dow(d)] + " " + dm(d);
+const weekOf = d => Math.floor((+d - W1) / (7 * DAY)) + 1;
+function weekRange(w){ const a = monday(w), b = new Date(+a + 6 * DAY);
+  return a.getUTCMonth() === b.getUTCMonth() ? `${a.getUTCDate()}–${dm(b)}` : `${dm(a)} – ${dm(b)}`; }
+function weeksLabel(a, b){ return a === b ? `week ${a}` : `weeks ${a}–${b}`; }
+
+const ICON = {
+  calendar:'<svg class="ic" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5 1.5v3M11 1.5v3"/></svg>',
+  targets:'<svg class="ic" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="2.5"/></svg>',
+  varieties:'<svg class="ic" viewBox="0 0 16 16"><path d="M3 13c0-6 4-10 10-10 0 6-4 10-10 10z"/><path d="M3 13l5.5-5.5"/></svg>',
+  gardens:'<svg class="ic" viewBox="0 0 16 16"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg>',
+  deliveries:'<svg class="ic" viewBox="0 0 16 16"><path d="M2 5l6-3 6 3v6l-6 3-6-3z"/><path d="M2 5l6 3 6-3M8 8v6"/></svg>',
+  weekly:'<svg class="ic" viewBox="0 0 16 16"><path d="M6 4h8M6 8h8M6 12h8"/><path d="M2.5 4h.01M2.5 8h.01M2.5 12h.01" stroke-width="2.2"/></svg>',
+  users:'<svg class="ic" viewBox="0 0 16 16"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14c.5-3 2.3-4.5 4.5-4.5s4 1.5 4.5 4.5"/><circle cx="11.5" cy="6" r="2"/><path d="M11.2 9.6c1.9.1 3 1.5 3.3 4"/></svg>',
+  check:'<svg class="ic" viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg>',
+  close:'<svg class="ic" viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg>',
+  left:'<svg class="ic" viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>',
+  right:'<svg class="ic" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg>',
+};
+
+/* ------------------------------------------------------------------ reference data */
+const PHASES = ["stekken","oppotten","wijder zetten","koelen","afkweek","stokken"];
+const COLORS = [
+  {id:"white",  name:"White",  hex:"#ffffff"},
+  {id:"yellow", name:"Yellow", hex:"#e3cd6b"},
+  {id:"orange", name:"Orange", hex:"#dd9a5a"},
+  {id:"pink",   name:"Pink",   hex:"#de9db7"},
+  {id:"violet", name:"Violet", hex:"#9f8fca"},
+  {id:"spotty", name:"Spotty", hex:"spotty"},
+];
+const colorOf = id => COLORS.find(c => c.id === id) || {name:id, hex:"#ccc"};
+const sw = id => id === "spotty" ? '<span class="sw spotty"></span>' : `<span class="sw" style="background:${colorOf(id).hex}"></span>`;
+const seg = (id, pct) => `<i style="width:${pct}%;background:${id === "spotty" ? "repeating-linear-gradient(90deg,#fff 0 3px,#9f8fca 3px 5px)" : colorOf(id).hex}"></i>`;
+
+// From Planten.xlsx: duration in days and plants per m² per phase, for garden 1 and garden 5.
+function V(name, color, family, d1, s1, k1, d5, o5, k5){
+  return {name, color, family, loss: 10, g: {
+    "1": {dur: d1, den: [s1, 142, 90, 90, 90, k1]},
+    "5": {dur: [null, ...d5], den: [null, o5, 83, 83, 83, k5]} }};
+}
+const VARIETIES = [
+  V("Albenga","yellow","Mineral Yellow",[7,115,50,70,41,12],325,69,[116,52,56,47,12],116,74),
+  V("Bolgheri Lemon","yellow","Mineral Yellow",[7,115,36,70,36,12],325,69,[118,53,56,53,14],118,74),
+  V("Deep Secret","yellow","Diamond",[7,122,41,70,42,12],329,69,[120,57,56,55,13],120,74),
+  V("Lima","yellow","Mineral Yellow",[7,111,43,70,56,14],325,69,[112,55,56,68,12],112,74),
+  V("Bolgheri","orange","Fragrance",[7,95,42,70,48,13],325,69,[116,52,56,47,12],116,74),
+  V("Bolzano","orange","Mineral Orange",[7,114,57,70,48,13],325,69,[131,49,56,50,12],131,74),
+  V("Dame Etna","orange","Niagara Fall",[7,115,43,70,44,13],329,90,[138,54,56,63,14],138,83),
+  V("Sunset","orange","Blossom",[7,120,46,70,48,13],329,69,[116,52,56,47,12],116,74),
+  V("Anastasia 14","pink","Diamond",[7,118,40,70,34,12],329,69,[117,55,56,39,14],117,74),
+  V("Beaution","pink","Mineral Pink",[7,117,37,70,37,12],325,69,[106,49,56,43,12],106,74),
+  V("Charisma 1","pink","Niagara Fall",[7,113,44,70,38,12],329,90,[115,55,56,39,11],115,83),
+  V("Camino Royale","violet","Mineral Violet",[7,119,41,70,34,12],329,69,[116,52,56,47,12],116,74),
+  V("Chamonix","violet","Blossom",[7,110,44,70,42,12],325,69,[116,52,56,47,12],116,74),
+  V("Presto Darling","violet","Diamond",[7,110,41,70,34,12],329,69,[116,52,56,47,12],116,74),
+  V("Vienna","violet","Mineral Violet",[7,112,40,70,35,12],325,69,[109,48,56,48,10],109,74),
+  V("Amabilis","white","Mineral White",[7,114,46,70,20,10],325,69,[116,52,56,47,12],116,74),
+  V("Cotton Duchess","white","Niagara Fall",[7,119,45,70,32,12],329,90,[116,52,56,47,11],116,83),
+  V("Nazare","white","Botanic",[7,116,44,70,38,12],325,90,[116,52,56,47,12],116,83),
+  V("Zurich","white","Blossom",[7,110,41,70,33,11],325,69,[117,50,56,34,12],117,74),
+];
+VARIETIES.find(v => v.name === "Lima").loss = 15;
+
+// From location2.ods: sections per garden, area in m².
+const GARDENS = [
+  {id:"1", name:"Garden 1", sections:[
+    {id:"g1-stek", name:"G1 Stekkas", area:497, phases:["stekken"]},
+    {id:"g1-opk12", name:"G1 Opkweek 1&2", area:10152, phases:["oppotten"]},
+    {id:"g1-opk3", name:"G1 Opkweek 3", area:5594, phases:["wijder zetten"]},
+    {id:"g1-koel", name:"G1 Koeling", area:8850, phases:["koelen"]},
+    {id:"g1-afk", name:"G1 Afkweek Ongestokt vast", area:4588, phases:["afkweek"]},
+    {id:"g1-flex", name:"G1 Afkweek Flex", area:1598, phases:["afkweek","stokken"]},
+    {id:"g1-stok", name:"G1 Afkweek Gestokt vast", area:2255, phases:["stokken"]} ]},
+  {id:"5", name:"Garden 5", sections:[
+    {id:"g5-opk12", name:"G5 Opkweek 1&2", area:5061, phases:["oppotten"]},
+    {id:"g5-opk3", name:"G5 Opkweek 3", area:3937, phases:["wijder zetten"]},
+    {id:"g5-koel", name:"G5 Koeling", area:4321, phases:["koelen"]},
+    {id:"g5-afk", name:"G5 Afkweek Ongestokt vast", area:2881, phases:["afkweek"]},
+    {id:"g5-flex", name:"G5 Afkweek Flexibel", area:1441, phases:["afkweek","stokken"]} ]},
+];
+
+const ROLE_LABEL = {planner:"Planner", staff:"Production staff", mgmt:"Management/Sales", admin:"Administrator"};
+const ROLE_ORDER = ["planner","mgmt","staff","admin"];
+const ROLE_SCREENS = {planner:"Varieties, gardens, targets and the calendar", staff:"Weekly actions", mgmt:"Calendar (view only) and expected deliveries", admin:"User management"};
+const USERS = [
+  {id:"u1", name:"Ilse Bakker", email:"ilse@grower.example", roles:["planner"], active:true},
+  {id:"u2", name:"Femke de Wit", email:"femke@grower.example", roles:["admin"], active:true},
+  {id:"u3", name:"Mohammed El Amrani", email:"mohammed@grower.example", roles:["staff"], active:true},
+  {id:"u4", name:"Daan Smit", email:"daan@grower.example", roles:["staff"], active:true},
+  {id:"u5", name:"Joost Verhoeven", email:"joost@grower.example", roles:["mgmt"], active:true},
+  {id:"u6", name:"Pieter Jansen", email:"pieter@grower.example", roles:["staff"], active:false},
+];
+const MENU = [
+  {id:"calendar", label:"Calendar", roles:["planner","mgmt"]},
+  {id:"targets", label:"Targets", roles:["planner"]},
+  {id:"varieties", label:"Varieties", roles:["planner"]},
+  {id:"gardens", label:"Gardens", roles:["planner"]},
+  {id:"deliveries", label:"Expected deliveries", roles:["mgmt"]},
+  {id:"weekly", label:"Weekly actions", roles:["staff"]},
+  {id:"users", label:"User management", roles:["admin"]},
+];
+const LANDING = {planner:"calendar", mgmt:"calendar", staff:"weekly", admin:"users"};
+
+// From "percentage per week.xlsx" (weeks 20–31); week 20 was raised to 85,000 (Functional Design, example 5.1.2).
+const DEFAULT_MIX = {white:10, yellow:20, orange:30, pink:15, violet:17, spotty:8};
+function buildTargets(){
+  const t = {};
+  for (let w = 1; w <= 17; w++) t[w] = {total:75000, pct:{...DEFAULT_MIX}, req:{}};
+  t[20] = {total:85000, pct:{...DEFAULT_MIX}, req:{orange:{"Bolzano":50}}};
+  t[21] = {total:70000, pct:{white:15, yellow:15, orange:30, pink:15, violet:17, spotty:8}, req:{}};
+  t[22] = {total:80000, pct:{white:10, yellow:25, orange:30, pink:15, violet:10, spotty:10}, req:{}};
+  for (let w = 23; w <= 31; w++) t[w] = {total:75000, pct:{...DEFAULT_MIX}, req:{}};
+  return t;
+}
+const EXPECTED = {20:75000};   // what the current schedule can deliver, where it differs from the target
+
+/* ------------------------------------------------------------------ test tasks */
+const PERSONA = {planner:"Ilse Bakker", staff:"Mohammed El Amrani", mgmt:"Joost Verhoeven", admin:"Femke de Wit"};
+const TASKS = [
+  {title:"Add a new variety", role:"planner", login:true,
+   text:`<p>You are the planner at a Phalaenopsis grower. Start by logging in. Any email address and password will work.</p>
+         <p>A new yellow variety, <b>Lima Gold</b> from the <b>Mineral Yellow</b> family, will be grown in garden 1. About <b>12%</b> of its plants are lost during production. Add it to the application.</p>
+         <p>Its growth values for garden 1:</p>
+         <table><tr><th>Phase</th><th>Days</th><th>Plants/m²</th></tr>
+         <tr><td>stekken</td><td class="n">7</td><td class="n">325</td></tr><tr><td>oppotten</td><td class="n">113</td><td class="n">142</td></tr>
+         <tr><td>wijder zetten</td><td class="n">45</td><td class="n">90</td></tr><tr><td>koelen</td><td class="n">70</td><td class="n">90</td></tr>
+         <tr><td>afkweek</td><td class="n">50</td><td class="n">90</td></tr><tr><td>stokken</td><td class="n">12</td><td class="n">69</td></tr></table>`},
+  {title:"Add a section to garden 5", role:"planner",
+   text:`<p>Garden 5 is getting its own stekkas: a new section of <b>300 m²</b> that is only used for <b>stekken</b>. Add it to garden 5.</p>`},
+  {title:"Enter the Mother's Day target", role:"planner",
+   text:`<p>For Mother's Day the grower wants <b>75,000 plants per week</b> in <b>weeks 18 and 19</b>: <b>30% pink</b>, <b>40% white</b> and <b>30% violet</b>. Enter this in the plan.</p>`},
+  {title:"Request a specific variety", role:"planner",
+   setup(d){ for (const w of [18,19]) d.targets[w] = {total:75000, pct:{white:40, yellow:0, orange:0, pink:30, violet:30, spotty:0}, req:{}}; },
+   text:`<p>A customer wants <b>at least half</b> of the pink plants in <b>week 18</b> to be the variety <b>Beaution</b>. Make sure the plan takes this into account.</p>`},
+  {title:"Check the schedule", role:"planner",
+   setup(d){ d.schedule = {state:"outdated", version:1, generated:"Tue 12 Jan 2027, 14:32", changed:"Wed 13 Jan 2027, 09:12"}; },
+   text:`<p>Some targets were changed this morning. Make sure the schedule is up to date. Then find out whether there are any problems.</p><p>If there are: what is the problem, where, and in which week?</p>`},
+  {title:"Today's work", role:"staff",
+   text:`<p>You work on the production floor. Today is <b>Wednesday 13 January 2027</b>.</p><p>What has to be done in <b>garden 1 today</b>? And is anything planned for <b>garden 5 next week</b>?</p>`},
+  {title:"Answer a customer", role:"mgmt",
+   text:`<p>You work in sales. A customer asks whether the grower can deliver <b>85,000 plants in week 20</b>.</p><p>Find out what you can tell them.</p>`},
+  {title:"Add a colleague", role:"admin",
+   text:`<p>You manage the user accounts. <b>Sanne de Vries</b> (sanne@grower.example) starts next week as a <b>planner</b>. She will also help you <b>manage the accounts</b>.</p><p>Create her account.</p>`},
+];
+
+/* ------------------------------------------------------------------ state */
+let S, DELTA = {};
+const D = () => S.data;
+function freshUi(){ return {vsel:"Sunset", vmode:"view", vform:null, tsel:null, mix:null, reqDraft:null, cal:{garden:"all", color:"all"},
+  generating:false, staffWeek:TODAY_WEEK, drawer:null, modal:null, expShort:false, expOpen:{}, secForm:null, uform:null, flash:null, move:null,
+  scrollWeek:null, login:{email:"", errors:{}}}; }
+function freshData(){
+  const d = {varieties: clone(VARIETIES), gardens: clone(GARDENS), targets: buildTargets(), users: clone(USERS),
+             schedule: {state:"current", version:2, generated:"Tue 12 Jan 2027, 14:32"}, batches: []};
+  return d;
+}
+function loadData(setup){
+  S.data = freshData();
+  if (setup) setup(S.data);
+  S.data.batches = makeBatches();
+  // Keep garden 5 free on Wednesday 13 January, as in Functional Design example 4.1.2.
+  S.data.batches = S.data.batches.filter(b => b.id === "b1" || !eventsOf(b).some(e => e.gid === "5" && sameDay(e.date, TODAY)));
+}
+const has = r => S.user && S.user.roles.includes(r);
+const varietyBy = name => D().varieties.find(v => v.name === name);
+const gardenBy = id => D().gardens.find(g => g.id === id);
+
+/* ------------------------------------------------------------------ planning model */
+function sectionFor(gid, pi){
+  const g = gardenBy(gid); if (!g) return null;
+  const c = g.sections.filter(s => s.phases.includes(PHASES[pi]));
+  c.sort((a, b) => a.phases.length - b.phases.length);   // dedicated sections first (Rule 3.3)
+  return c[0] || null;
+}
+const canHost = (gid, pi, v) => !!sectionFor(gid, pi) && !!(v.g[gid] && v.g[gid].dur[pi]);
+function defaultPG(b){ const v = varietyBy(b.variety); return PHASES.map((_, pi) => canHost(b.garden, pi, v) ? b.garden : "1"); }
+const pgOf = b => b.pg || defaultPG(b);
+function route(b, pgOverride){
+  const v = varietyBy(b.variety), pg = pgOverride || pgOf(b);
+  const ready = new Date(+monday(b.week) - DAY);           // ready the Sunday before the delivery week
+  let end = +ready; const steps = new Array(6);
+  for (let pi = 5; pi >= 0; pi--){
+    const gid = pg[pi], gv = v.g[gid] || v.g["1"];
+    const dur = gv.dur[pi], den = gv.den[pi], start = end - dur * DAY;
+    steps[pi] = {pi, gid, sec: sectionFor(gid, pi), start: new Date(start), end: new Date(end), dur, den};
+    end = start;
+  }
+  return {steps, ready};
+}
+const startedOf = b => Math.ceil(b.deliver / (1 - varietyBy(b.variety).loss / 100));
+const isStarted = b => route(b).steps[0].start <= TODAY;
+function makeBatches(){
+  const names = D().varieties.map(v => v.name), L = []; let n = 0;
+  const mk = (variety, garden, week, deliver) => ({id: "b" + (++n), variety, garden, week, deliver, pg: null});
+  L.push(mk("Albenga", "1", 20, 10000));                   // Functional Design example 3.2.1
+  for (let w = 14; w <= 44; w++){
+    L.push(mk(names[(w * 5) % names.length], "1", w, 4000 + ((w * 37) % 9) * 500));
+    L.push(mk(names[(w * 7 + 3) % names.length], "5", w, 3500 + ((w * 53) % 7) * 500));
+  }
+  return L;
+}
+function eventsOf(b){
+  const s = route(b).steps, n = startedOf(b), ev = [];
+  ev.push({b, type:"start", pi:0, date:s[0].start, to:s[0].sec, gid:s[0].gid, plants:n});
+  for (let pi = 1; pi < 6; pi++) ev.push({b, type:"move", pi, date:s[pi].start, from:s[pi-1].sec, to:s[pi].sec, gid:s[pi].gid, plants:n});
+  ev.push({b, type:"deliver", pi:6, date:monday(b.week), from:s[5].sec, gid:s[5].gid, plants:b.deliver});
+  return ev;
+}
+const allEvents = () => D().batches.flatMap(eventsOf);
+const secName = s => s ? s.name : "no section";
+function evTitle(e){ return e.type === "start" ? "Start stekken" : e.type === "deliver" ? "Deliver" : "Move to " + PHASES[e.pi]; }
+function evWhere(e){
+  if (e.type === "start") return secName(e.to);
+  if (e.type === "deliver") return "from " + secName(e.from) + ", week " + e.b.week;
+  return secName(e.from) + " → " + secName(e.to);
+}
+
+// Space used per section per week (m²). Sample load, plus the effect of phases the planner moved.
+function baseUse(sec, w){
+  if (sec.added) return 0;
+  if (sec.id === "g1-koel"){
+    const o = {1:8420, 2:8700, 3: D().schedule.version === 2 ? 9050 : 8640, 4:8600, 5:8790, 6:8510};
+    if (o[w] != null) return o[w];
+  }
+  let h = 0; for (const c of sec.id) h = (h * 31 + c.charCodeAt(0)) % 997;
+  return Math.round(sec.area * (0.72 + ((w * 17 + h) % 19) / 100));
+}
+function computeDeltas(){
+  const d = {};
+  const add = (st, m2) => { if (!st.sec) return; const a = weekOf(st.start), z = weekOf(new Date(+st.end - 1));
+    for (let w = a; w <= z; w++){ (d[st.sec.id] ||= {})[w] = ((d[st.sec.id] || {})[w] || 0) + m2; } };
+  for (const b of D().batches){
+    if (!b.pg) continue;
+    const def = defaultPG(b), n = startedOf(b), cur = route(b), orig = route(b, def);
+    for (let pi = 0; pi < 6; pi++){
+      if (b.pg[pi] === def[pi]) continue;
+      add(orig.steps[pi], -Math.ceil(n / orig.steps[pi].den));
+      add(cur.steps[pi], Math.ceil(n / cur.steps[pi].den));
+    }
+  }
+  return d;
+}
+const usage = (sec, w) => Math.max(0, baseUse(sec, w) + ((DELTA[sec.id] || {})[w] || 0));
+function overSections(w){ const r = [];
+  for (const g of D().gardens) for (const s of g.sections){ const u = usage(s, w); if (u > s.area) r.push({sec:s, used:u}); }
+  return r; }
+const expectedFor = w => { const t = D().targets[w]; if (!t) return null; return EXPECTED[w] != null ? Math.min(EXPECTED[w], t.total) : t.total; };
+function shortWeek(w){ const t = D().targets[w], e = expectedFor(w); return D().schedule.version === 2 && t && e < t.total ? {target:t.total, expected:e} : null; }
+function problems(weeks){
+  const p = [];
+  for (const w of weeks){
+    for (const o of overSections(w)) p.push({w, kind:"over", text:`${o.sec.name} is ${fmt(o.used - o.sec.area)} m² over capacity`});
+    const s = shortWeek(w);
+    if (s) p.push({w, kind:"short", text:`the target can't be fully met: ${fmt(s.expected)} of ${fmt(s.target)} plants (${fmt(s.target - s.expected)} short)`});
+  }
+  return p;
+}
+
+/* ------------------------------------------------------------------ rendering */
+// Every render replaces the page, so remember where the scrollable areas were and put them back
+// (only when the same screen of the same task is shown again).
+const SCROLLERS = [".strip", ".board", "#content"];
+const ctxKey = () => `${S.mode}:${S.task}:${S.loggedIn}:${S.screen}`;
+function snapScroll(){
+  const c = document.getElementById("content"), d = document.querySelector(".drawer");
+  const s = {ctx: c ? c.dataset.ctx : null, pos: {}, drawer: d ? [d.dataset.key, d.querySelector(".drawer-b").scrollTop] : null};
+  for (const sel of SCROLLERS){ const el = document.querySelector(sel); if (el) s.pos[sel] = [el.scrollLeft, el.scrollTop]; }
+  return s;
+}
+function restoreScroll(s){
+  if (s.ctx && s.ctx === ctxKey()) for (const sel of SCROLLERS){ const el = document.querySelector(sel); if (el && s.pos[sel]){ el.scrollLeft = s.pos[sel][0]; el.scrollTop = s.pos[sel][1]; } }
+  const d = document.querySelector(".drawer");
+  if (d && s.drawer && d.dataset.key === s.drawer[0]) d.querySelector(".drawer-b").scrollTop = s.drawer[1];
+}
+function render(){
+  const keep = snapScroll();
+  DELTA = computeDeltas();
+  const app = document.getElementById("app");
+  if (S.mode === "intro") app.innerHTML = viewIntro();
+  else if (S.mode === "end") app.innerHTML = viewEnd();
+  else if (!S.loggedIn) app.innerHTML = viewLogin();
+  else app.innerHTML = viewShell();
+  // During a task the note sits in the sidebar; only on the login screen does it float.
+  document.getElementById("note").innerHTML = S.mode === "task" && !S.loggedIn ? viewNote(false) : S.mode === "free" ? viewFreeTab() : "";
+  document.getElementById("overlay").innerHTML = (S.loggedIn && (S.mode === "task" || S.mode === "free") ? viewDrawer() : "") + viewModal();
+  restoreScroll(keep);
+  afterRender();
+}
+function afterRender(){
+  if (S.ui.scrollWeek){ const el = document.getElementById("wk-" + S.ui.scrollWeek); if (el) el.scrollIntoView({block:"nearest", inline:"center"}); S.ui.scrollWeek = null; }
+  if (S.ui.scrollCol){ const el = document.getElementById("col-" + S.ui.scrollCol); if (el) el.scrollIntoView({block:"nearest", inline:"center"}); S.ui.scrollCol = null; }
+  if (S.ui.focus){ const el = document.querySelector(S.ui.focus); if (el) el.focus(); S.ui.focus = null; }
+  if (S.ui.flash){ setTimeout(() => { if (S.ui.flash){ S.ui.flash = null; } }, 2600); }
+  if (S.ui.mix) mixLive();
+  if (S.ui.modal && S.ui.modal.type === "req") reqLive();
+  if (S.ui.vform) vformTotals();
+}
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.innerHTML = `<div class="toast" role="status">${ICON.check}<span>${esc(msg)}</span></div>`;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.innerHTML = ""; }, 3800);
+}
+const isFlash = key => S.ui.flash === key;
+
+/* intro / end / login */
+function viewIntro(){
+  return `<div class="frame"><div class="intro">
+    <div class="eyebrow">Usability test · wireframe</div>
+    <h1>Production Planner</h1>
+    <p>This is a clickable wireframe of a planning application for a Phalaenopsis (orchid) grower. It's a rough sketch: the grey boxes and simple layout are on purpose, and nothing you do is saved.</p>
+    <h2>How it works</h2>
+    <ol>
+      <li>A yellow note in the bottom-left corner tells you what to do. There are ${TASKS.length} short tasks.</li>
+      <li>Think out loud while you work. Say what you're looking for, what you expect to happen when you click, and what surprises or confuses you.</li>
+      <li>When you think you've finished a task, or you would give up, click <b>Done, next task</b> on the note.</li>
+    </ol>
+    <div class="row"><button class="btn primary" data-act="start-task" data-i="0">Start the test</button>
+      <button class="btn" data-act="free">Explore without tasks</button></div>
+  </div></div>`;
+}
+function viewEnd(){
+  return `<div class="frame"><div class="intro">
+    <div class="eyebrow">Usability test · finished</div>
+    <h1>That was the last task. Thank you!</h1>
+    <div class="row"><button class="btn" data-act="intro">Back to the start</button></div>
+  </div></div>`;
+}
+function viewLogin(){
+  const e = S.ui.login.errors;
+  return `<div class="frame"><form class="login" id="login" novalidate>
+    <div class="brand"><span class="logo">PP</span><span>Production Planner</span></div>
+    <h1>Log in</h1>
+    <div class="field"><label for="l-email">Email address</label>
+      <input class="in${e.email ? " err" : ""}" id="l-email" type="email" autocomplete="off" value="${esc(S.ui.login.email)}">
+      <div class="msg">${esc(e.email || "")}</div></div>
+    <div class="field"><label for="l-pass">Password</label>
+      <input class="in${e.pass ? " err" : ""}" id="l-pass" type="password" autocomplete="off">
+      <div class="msg">${esc(e.pass || "")}</div></div>
+    <button class="btn primary wide" type="submit">Log in</button>
+    <p class="hint">Prototype: any email address and password work.</p>
+  </form></div>`;
+}
+
+/* shell */
+function screenTitle(){ const m = MENU.find(m => m.id === S.screen); return m ? m.label : ""; }
+function viewShell(){
+  const items = MENU.filter(m => m.roles.some(has));
+  const tasking = S.mode === "task";
+  return `<div class="shell${tasking ? " tasking" : ""}">
+    <nav class="side" aria-label="Main menu">
+      <div class="brand"><span class="logo">PP</span><span>Production Planner</span></div>
+      <div class="menu">${items.map(m => `<button class="mi${S.screen === m.id ? " on" : ""}" data-act="nav" data-id="${m.id}"${S.screen === m.id ? ' aria-current="page"' : ""}>${ICON[m.id]}<span>${m.label}</span></button>`).join("")}</div>
+      ${tasking ? viewNote(true) : ""}
+    </nav>
+    <div class="main">
+      <header class="top">
+        <div class="crumb">${esc(screenTitle())}</div>
+        <div class="who"><span class="today mono">${ddm(TODAY)} ${YEAR}</span>
+          <b>${esc(S.user.name)}</b>${ROLE_ORDER.filter(has).map(r => `<span class="chip">${ROLE_LABEL[r]}</span>`).join("")}
+          <button class="btn ghost sm" data-act="logout">Log out</button></div>
+      </header>
+      <main class="content" id="content" data-ctx="${esc(ctxKey())}">${viewScreen()}</main>
+    </div></div>`;
+}
+function viewScreen(){
+  switch (S.screen){
+    case "calendar": return viewCalendar();
+    case "targets": return viewTargets();
+    case "varieties": return viewVarieties();
+    case "gardens": return viewGardens();
+    case "deliveries": return viewDeliveries();
+    case "weekly": return viewWeekly();
+    case "users": return viewUsers();
+  }
+  return "";
+}
+
+/* calendar */
+function viewCalendar(){
+  const edit = has("planner"), sch = D().schedule, f = S.ui.cal, weeks = range(1, 26);
+  const evs = allEvents().filter(e => { const w = weekOf(e.date);
+    return w >= 1 && w <= 26 && (f.garden === "all" || e.gid === f.garden) && (f.color === "all" || varietyBy(e.b.variety).color === f.color); });
+  const byW = {}; evs.forEach(e => (byW[weekOf(e.date)] ||= []).push(e));
+  const probs = sch.state === "current" ? problems(weeks) : [];
+  let banner = "";
+  if (sch.state === "outdated"){
+    banner = `<div class="banner info"><div><b>This schedule may be out of date.</b><br><span class="hint">The targets were changed on ${esc(sch.changed || "")}, after the schedule was generated.</span></div>
+      ${edit ? `<button class="btn primary" data-act="generate"${S.ui.generating ? " disabled" : ""}>${S.ui.generating ? "Generating…" : "Generate schedule"}</button>` : ""}</div>`;
+  } else if (probs.length){
+    banner = `<div class="banner err" role="alert"><div><b>${probs.length} ${plural(probs.length, "problem")} in this schedule</b>
+      <ul>${probs.map(p => `<li><button class="linkbtn" data-act="${p.kind === "over" ? "week" : "goto-week"}" data-w="${p.w}">Week ${p.w}</button>: ${esc(p.text)}</li>`).join("")}</ul></div></div>`;
+  }
+  const gardenOpts = [["all", "All gardens"], ...D().gardens.map(g => [g.id, g.name])];
+  const colorOpts = [["all", "All colors"], ...COLORS.map(c => [c.id, c.name])];
+  const opt = (list, val) => list.map(([v, l]) => `<option value="${v}"${v === val ? " selected" : ""}>${esc(l)}</option>`).join("");
+  return `<div class="ph"><div><h1>Calendar ${YEAR}</h1><p class="hint">What happens each week. Click an action to see its batch.</p></div></div>
+    <div class="toolbar">
+      ${edit ? `<button class="btn primary" data-act="generate"${S.ui.generating ? " disabled" : ""}>${S.ui.generating ? "Generating…" : "Generate schedule"}</button>` : `<span class="chip">View only</span>`}
+      <span class="hint">Last generated: ${esc(sch.generated)}</span>
+      <span class="spacer"></span>
+      <label class="inl" for="f-garden">Garden <select class="in sm" id="f-garden" data-cal="garden">${opt(gardenOpts, f.garden)}</select></label>
+      <label class="inl" for="f-color">Color <select class="in sm" id="f-color" data-cal="color">${opt(colorOpts, f.color)}</select></label>
+    </div>
+    ${banner}
+    <div class="board" aria-label="Weeks">${weeks.map(w => colHtml(w, byW[w] || [], sch.state === "current")).join("")}</div>`;
+}
+function colHtml(w, list, current){
+  list.sort((a, b) => a.date - b.date || a.pi - b.pi);
+  const over = current ? overSections(w) : [], short = current ? shortWeek(w) : null;
+  return `<section class="col${over.length || short ? " bad" : ""}${w === TODAY_WEEK ? " now" : ""}" id="col-${w}" aria-label="Week ${w}">
+    <div class="col-h"><div class="col-t"><b>Week ${w}</b>${w === TODAY_WEEK ? '<span class="chip dark sm">This week</span>' : ""}</div>
+      <span class="hint">${weekRange(w)}</span>
+      ${short ? `<div class="flag">Target not fully met: ${fmt(short.expected)} of ${fmt(short.target)} plants</div>` : ""}</div>
+    <div class="col-b">${list.length ? list.map(cardHtml).join("") : '<div class="hint empty">No actions</div>'}</div>
+    <div class="col-f">${D().gardens.filter(g => g.sections.length).map(g => gardenUse(g, w)).join("")}
+      ${over.map(o => `<div class="flag">${esc(o.sec.name)}: ${fmt(o.used - o.sec.area)} m² over capacity</div>`).join("")}
+      <button class="btn sm" data-act="week" data-w="${w}">Space per section</button></div>
+  </section>`;
+}
+function cardHtml(e){
+  const v = varietyBy(e.b.variety), moved = !!e.b.pg;
+  return `<button class="act${moved ? " moved" : ""}" data-act="batch" data-id="${e.b.id}">
+    <span class="tag">${e.type.toUpperCase()} · ${DOW[dow(e.date)]} ${dm(e.date)}</span>
+    <span class="act-t">${evTitle(e)}</span>
+    <span>${sw(v.color)} ${fmt(e.plants)} ${esc(v.name)}</span>
+    <span class="act-w">${esc(evWhere(e))}</span></button>`;
+}
+function gardenUse(g, w){
+  const area = g.sections.reduce((s, x) => s + x.area, 0), used = g.sections.reduce((s, x) => s + usage(x, w), 0);
+  const pct = area ? Math.round(used / area * 100) : 0;
+  return `<div class="use"><div class="use-t"><span>${esc(g.name)}</span><span class="mono">${pct}%</span></div><div class="bar"><i style="width:${Math.min(pct, 100)}%"></i></div></div>`;
+}
+
+/* targets */
+function inSel(w){ const s = S.ui.tsel; return !!s && w >= s.from && w <= s.to; }
+function viewTargets(){
+  const T = D().targets, sel = S.ui.tsel;
+  const cards = range(1, 52).map(w => { const t = T[w];
+    return `<button class="wk${t ? "" : " empty"}${inSel(w) ? " sel" : ""}${isFlash("wk:" + w) ? " flashy" : ""}" id="wk-${w}" data-act="wk" data-w="${w}" aria-pressed="${inSel(w)}">
+      <span class="wk-t"><b>W${w}</b>${w === TODAY_WEEK ? '<span class="chip dark sm">Now</span>' : ""}</span>
+      <span class="hint">${weekRange(w)}</span>
+      ${t ? `<span class="wk-n">${fmt(t.total)}</span><span class="mixbar">${COLORS.filter(c => t.pct[c.id] > 0).map(c => seg(c.id, t.pct[c.id])).join("")}</span>` : '<span class="wk-none">No target</span>'}
+    </button>`; }).join("");
+  return `<div class="ph"><div><h1>Targets ${YEAR}</h1><p class="hint">How many plants must be ready each week, and in which colors.</p></div></div>
+    <div class="panel" style="margin-bottom:16px"><div class="panel-b" style="gap:8px">
+      <p class="hint">Click a week to open its target. To select a period, hold Shift and click another week, or enter the weeks in the target panel.</p>
+      <div class="strip" aria-label="Weeks of ${YEAR}">${cards}</div></div></div>
+    ${sel ? viewMix() : `<div class="panel"><div class="panel-h"><h2>Target</h2>${periodInputs()}</div><div class="panel-b"><p class="hint">Select a week or a period to see or change its target.</p></div></div>`}`;
+}
+function periodInputs(){
+  const s = S.ui.tsel || {};
+  return `<div class="period"><label for="p-from">Weeks</label><input class="in" id="p-from" inputmode="numeric" data-tsel="from" value="${s.from ?? ""}" aria-label="From week">
+    <span>to</span><input class="in" id="p-to" inputmode="numeric" data-tsel="to" value="${s.to ?? ""}" aria-label="Until week"></div>`;
+}
+function loadMix(){
+  const s = S.ui.tsel, T = D().targets, first = T[s.from];
+  const anyDiff = range(s.from, s.to).some(w => JSON.stringify(T[w] || null) !== JSON.stringify(first || null));
+  S.ui.mix = first ? {total: fmt(first.total), pct: Object.fromEntries(COLORS.map(c => [c.id, first.pct[c.id] ? String(first.pct[c.id]) : ""])), req: clone(first.req || {}), differs: anyDiff}
+                   : {total: "", pct: Object.fromEntries(COLORS.map(c => [c.id, ""])), req: {}, differs: anyDiff};
+}
+function viewMix(){
+  const s = S.ui.tsel, m = S.ui.mix, n = s.to - s.from + 1;
+  return `<div class="panel" id="mixpanel">
+    <div class="panel-h"><div><h2>Target for ${weeksLabel(s.from, s.to)}</h2><span class="hint">${dm(monday(s.from))} – ${dm(new Date(+monday(s.to) + 6 * DAY))} ${YEAR}${n > 1 ? " · " + n + " weeks" : ""}</span></div>${periodInputs()}</div>
+    <div class="panel-b">
+      ${m.differs ? `<div class="banner info" style="margin:0"><div>The selected weeks don't all have the same target. Saving gives every selected week the target below.</div></div>` : ""}
+      <div class="grid2" style="grid-template-columns:minmax(0,260px) 1fr;align-items:end">
+        <div class="field"><label for="m-total">Plants per week</label><input class="in num" id="m-total" inputmode="numeric" data-mix="total" value="${esc(m.total)}" placeholder="e.g. 75,000"></div>
+        <span class="hint">This number applies to each selected week.</span></div>
+      <div class="sumline"><span class="lbl">Color split</span><span class="mono" id="m-sum"></span></div>
+      <div class="mixbar big" id="m-bar"></div>
+      <div>${COLORS.map(c => `<div class="mixrow">
+          <span class="cname">${sw(c.id)} ${c.name}</span>
+          <span class="pct"><input class="in num" id="m-${c.id}" inputmode="decimal" data-mix="${c.id}" value="${esc(m.pct[c.id])}" placeholder="0" aria-label="${c.name} percentage"><span>%</span></span>
+          <span class="hint mono" id="mp-${c.id}"></span>
+          <button class="btn sm" data-act="req-open" data-c="${c.id}" id="mr-${c.id}">Varieties</button></div>`).join("")}</div>
+    </div>
+    <div class="panel-f"><span class="status" id="m-status"></span><span class="spacer"></span>
+      <button class="btn primary" id="m-save" data-act="save-target">Save target${n > 1 ? " for " + n + " weeks" : ""}</button></div>
+  </div>`;
+}
+function mixState(){
+  const m = S.ui.mix, total = digits(m.total);
+  const pct = Object.fromEntries(COLORS.map(c => [c.id, dec(m.pct[c.id]) || 0]));
+  const sum = Math.round(COLORS.reduce((a, c) => a + pct[c.id], 0) * 100) / 100;
+  let status = "", ok = false;
+  if (!total) status = "Enter the number of plants per week.";
+  else if (sum < 100) status = `${fmt(Math.round((100 - sum) * 100) / 100)}% is still unassigned.`;
+  else if (sum > 100) status = `${fmt(Math.round((sum - 100) * 100) / 100)}% too much. The colors must add up to exactly 100%.`;
+  else { status = "The colors add up to 100%."; ok = true; }
+  return {total, pct, sum, status, ok};
+}
+function mixLive(){
+  if (!document.getElementById("m-sum")) return;
+  const st = mixState(), m = S.ui.mix;
+  document.getElementById("m-sum").textContent = `${fmt(st.sum)}% of 100%`;
+  document.getElementById("m-bar").innerHTML = COLORS.filter(c => st.pct[c.id] > 0).map(c => seg(c.id, Math.min(st.pct[c.id], 100))).join("");
+  for (const c of COLORS){
+    const p = st.total ? Math.round(st.total * st.pct[c.id] / 100) : 0;
+    document.getElementById("mp-" + c.id).textContent = st.pct[c.id] ? `= ${fmt(p)} plants` : "";
+    const r = m.req[c.id] ? Object.keys(m.req[c.id]).length : 0;
+    document.getElementById("mr-" + c.id).textContent = r ? `Varieties · ${r} minimum${r > 1 ? "s" : ""}` : "Varieties";
+  }
+  const el = document.getElementById("m-status");
+  el.textContent = st.status; el.className = "status" + (st.ok ? "" : " bad");
+  document.getElementById("m-save").disabled = !st.ok;
+}
+
+/* varieties */
+function viewVarieties(){
+  const vs = [...D().varieties].sort((a, b) => COLORS.findIndex(c => c.id === a.color) - COLORS.findIndex(c => c.id === b.color) || a.name.localeCompare(b.name));
+  const list = `<div class="panel"><div class="panel-h"><h2>Varieties <span class="hint">(${vs.length})</span></h2><button class="btn primary" data-act="v-new">Add variety</button></div>
+    <div class="scroll-x"><table class="tbl"><thead><tr><th>Name</th><th>Color</th><th>Family</th><th class="n">Loss</th><th>Gardens</th></tr></thead><tbody>
+    ${vs.map(v => `<tr class="click${S.ui.vmode === "view" && S.ui.vsel === v.name ? " sel" : ""}${isFlash("v:" + v.name) ? " flash" : ""}" data-act="v-sel" data-name="${esc(v.name)}" tabindex="0">
+      <td><b>${esc(v.name)}</b></td><td>${sw(v.color)} ${colorOf(v.color).name}</td><td>${esc(v.family)}</td><td class="n">${v.loss}%</td>
+      <td>${Object.keys(v.g).map(gid => (gardenBy(gid) || {name: "Garden " + gid}).name.replace("Garden ", "")).join(", ")}</td></tr>`).join("")}
+    </tbody></table></div></div>`;
+  const right = S.ui.vmode === "view" ? varietyDetail(varietyBy(S.ui.vsel)) : varietyForm();
+  return `<div class="ph"><div><h1>Varieties</h1><p class="hint">Each variety has a color, a family, a loss percentage and a growth chart per garden.</p></div></div>
+    <div class="split">${list}${right}</div>`;
+}
+function growTotals(v){
+  const out = [];
+  if (v.g["1"] && v.g["1"].dur.every(x => x)) { const t = v.g["1"].dur.reduce((a, b) => a + b, 0); out.push(`Stays in garden 1: <b>${t} days</b> (about ${Math.round(t / 7)} weeks)`); }
+  for (const g of D().gardens){
+    if (g.id === "1" || !v.g[g.id]) continue;
+    const d = PHASES.map((_, pi) => v.g[g.id].dur[pi] || (v.g["1"] ? v.g["1"].dur[pi] : null));
+    if (d.every(x => x)) { const t = d.reduce((a, b) => a + b, 0); out.push(`Grown in ${g.name.toLowerCase()}${v.g[g.id].dur[0] ? "" : " (stekken in garden 1)"}: <b>${t} days</b> (about ${Math.round(t / 7)} weeks)`); }
+  }
+  return out;
+}
+function varietyDetail(v){
+  if (!v) return `<div class="panel"><div class="panel-b"><p class="hint">Select a variety to see its growth chart.</p></div></div>`;
+  const gs = D().gardens.filter(g => v.g[g.id]);
+  return `<div class="panel">
+    <div class="panel-h"><div><h2>${esc(v.name)}</h2><span class="hint">${sw(v.color)} ${colorOf(v.color).name} · ${esc(v.family)} · loss ${v.loss}%</span></div>
+      <button class="btn" data-act="v-edit">Edit</button></div>
+    <div class="panel-b"><div class="scroll-x"><table class="tbl chart"><thead><tr><th>Phase</th>${gs.map(g => `<th class="n">${esc(g.name)}<br>days</th><th class="n">plants/m²</th>`).join("")}</tr></thead><tbody>
+      ${PHASES.map((p, pi) => `<tr><td>${p}</td>${gs.map(g => v.g[g.id].dur[pi] ? `<td class="n">${v.g[g.id].dur[pi]}</td><td class="n">${v.g[g.id].den[pi]}</td>` : `<td class="na" colspan="2">no stekkas, uses garden 1</td>`).join("")}</tr>`).join("")}
+    </tbody></table></div>
+    <div class="hint" style="display:flex;flex-direction:column;gap:3px">${growTotals(v).map(x => `<span>${x}</span>`).join("")}</div></div></div>`;
+}
+function newVform(v){
+  const f = {orig: v ? v.name : null, name: v ? v.name : "", color: v ? v.color : "", family: v ? v.family : "", loss: v ? String(v.loss) : "10", use: {}, dur: {}, den: {}, errors: {}, general: []};
+  for (const g of D().gardens){
+    f.use[g.id] = v ? !!v.g[g.id] : g.id === "1";
+    f.dur[g.id] = PHASES.map((_, pi) => v && v.g[g.id] && v.g[g.id].dur[pi] ? String(v.g[g.id].dur[pi]) : "");
+    f.den[g.id] = PHASES.map((_, pi) => v && v.g[g.id] && v.g[g.id].den[pi] ? String(v.g[g.id].den[pi]) : "");
+  }
+  return f;
+}
+function varietyForm(){
+  const f = S.ui.vform, e = f.errors, fam = [...new Set(D().varieties.map(v => v.family))].sort();
+  const gs = D().gardens.filter(g => f.use[g.id]);
+  const cell = (gid, kind, pi) => { const key = `${kind}.${gid}.${pi}`;
+    return `<input class="in num${e[key] ? " err" : ""}" inputmode="numeric" data-f="${key}" data-live="1" value="${esc(f[kind][gid][pi])}" aria-label="${gardenBy(gid).name} ${PHASES[pi]} ${kind === "dur" ? "days" : "plants per m²"}">`; };
+  return `<div class="panel" id="vform">
+    <div class="panel-h"><h2>${f.orig ? "Edit " + esc(f.orig) : "New variety"}</h2></div>
+    <div class="panel-b">
+      ${Object.keys(e).length || f.general.length ? `<div class="banner err" style="margin:0" role="alert"><div><b>The variety can't be saved yet.</b>
+        <ul>${f.general.map(x => `<li>${esc(x)}</li>`).join("")}${Object.keys(e).some(k => k.includes(".")) ? "<li>Fill in all marked days and densities.</li>" : ""}${["name","color","family","loss"].filter(k => e[k]).map(k => `<li>${esc(e[k])}</li>`).join("")}</ul></div></div>` : ""}
+      <div class="grid2">
+        <div class="field"><label for="v-name">Name</label><input class="in${e.name ? " err" : ""}" id="v-name" data-f="name" value="${esc(f.name)}"><div class="msg">${esc(e.name || "")}</div></div>
+        <div class="field"><label for="v-color">Color</label><select class="in${e.color ? " err" : ""}" id="v-color" data-f="color">
+          <option value="">Choose a color</option>${COLORS.map(c => `<option value="${c.id}"${f.color === c.id ? " selected" : ""}>${c.name}</option>`).join("")}</select><div class="msg">${esc(e.color || "")}</div></div>
+        <div class="field"><label for="v-family">Family</label><input class="in${e.family ? " err" : ""}" id="v-family" list="families" data-f="family" value="${esc(f.family)}">
+          <datalist id="families">${fam.map(x => `<option value="${esc(x)}">`).join("")}</datalist><div class="msg">${esc(e.family || "")}</div></div>
+        <div class="field"><label for="v-loss">Loss (uitval)</label><div class="pct"><input class="in num${e.loss ? " err" : ""}" id="v-loss" inputmode="decimal" data-f="loss" value="${esc(f.loss)}" style="width:80px"><span>%</span></div>
+          <div class="hint">Share of plants lost during production. Default 10%.</div><div class="msg">${esc(e.loss || "")}</div></div>
+      </div>
+      <div class="field"><span class="lbl">Grown in</span>
+        <div class="checks${e.gardens ? " err" : ""}">${D().gardens.map(g => `<label class="check"><input type="checkbox" data-f="use.${g.id}" ${f.use[g.id] ? "checked" : ""}> ${esc(g.name)}</label>`).join("")}</div>
+        <div class="msg">${esc(e.gardens || "")}</div></div>
+      ${gs.length ? `<div class="field"><span class="lbl">Growth chart</span><div class="scroll-x"><table class="tbl chart"><thead><tr><th>Phase</th>${gs.map(g => `<th class="n">${esc(g.name)}<br>days</th><th class="n">plants/m²</th>`).join("")}</tr></thead><tbody>
+        ${PHASES.map((p, pi) => `<tr><td>${p}</td>${gs.map(g => sectionFor(g.id, pi) ? `<td class="n">${cell(g.id, "dur", pi)}</td><td class="n">${cell(g.id, "den", pi)}</td>` : `<td class="na" colspan="2">no section for ${p}</td>`).join("")}</tr>`).join("")}
+        </tbody></table></div><div class="hint" id="v-tot"></div></div>` : ""}
+    </div>
+    <div class="panel-f"><button class="btn" data-act="v-cancel">Cancel</button><button class="btn primary" data-act="v-save">${f.orig ? "Save changes" : "Add variety"}</button></div>
+  </div>`;
+}
+function vformTotals(){
+  const el = document.getElementById("v-tot"); if (!el) return;
+  const f = S.ui.vform, parts = [];
+  for (const g of D().gardens){
+    if (!f.use[g.id]) continue;
+    const d = PHASES.map((_, pi) => sectionFor(g.id, pi) ? digits(f.dur[g.id][pi]) : (f.use["1"] ? digits(f.dur["1"][pi]) : null));
+    const filled = d.filter(x => x).length;
+    parts.push(filled === 6 ? `${g.name}: ${d.reduce((a, b) => a + b, 0)} days in total` : `${g.name}: ${filled} of 6 phases filled in`);
+  }
+  el.textContent = parts.join(" · ");
+}
+function saveVariety(){
+  const f = S.ui.vform, e = {}, general = [];
+  const name = f.name.trim(), family = f.family.trim(), loss = dec(f.loss);
+  if (!name) e.name = "Enter a name.";
+  else if (D().varieties.some(v => v.name.toLowerCase() === name.toLowerCase() && v.name !== f.orig)) e.name = "A variety with this name already exists.";
+  if (!f.color) e.color = "Choose a color.";
+  if (!family) e.family = "Enter a family.";
+  if (loss == null || loss < 0 || loss > 99) e.loss = "Enter a loss percentage between 0 and 99.";
+  const used = D().gardens.filter(g => f.use[g.id]);
+  if (!used.length) e.gardens = "Select at least one garden.";
+  for (const g of used) for (let pi = 0; pi < 6; pi++){
+    if (!sectionFor(g.id, pi)) continue;
+    if (!digits(f.dur[g.id][pi])) e[`dur.${g.id}.${pi}`] = 1;
+    if (!digits(f.den[g.id][pi])) e[`den.${g.id}.${pi}`] = 1;
+  }
+  for (let pi = 0; pi < 6; pi++) if (used.length && !used.some(g => sectionFor(g.id, pi))) general.push(`${PHASES[pi][0].toUpperCase() + PHASES[pi].slice(1)} needs values in at least one garden that has a section for it.`);
+  f.errors = e; f.general = general;
+  if (Object.keys(e).length || general.length){ render(); const first = document.querySelector("#vform .err"); if (first) first.focus(); return; }
+  const v = {name, color: f.color, family, loss, g: {}};
+  for (const g of used) v.g[g.id] = {dur: PHASES.map((_, pi) => sectionFor(g.id, pi) ? digits(f.dur[g.id][pi]) : null), den: PHASES.map((_, pi) => sectionFor(g.id, pi) ? digits(f.den[g.id][pi]) : null)};
+  if (f.orig){ const i = D().varieties.findIndex(x => x.name === f.orig); D().varieties[i] = v; D().batches.forEach(b => { if (b.variety === f.orig) b.variety = name; }); toast(`Changes to ${name} saved`); }
+  else { D().varieties.push(v); toast(`Variety ${name} added`); }
+  S.ui.vsel = name; S.ui.vmode = "view"; S.ui.vform = null; S.ui.flash = "v:" + name; render();
+}
+
+/* gardens */
+function viewGardens(){
+  return `<div class="ph"><div><h1>Gardens</h1><p class="hint">Each garden is divided into sections. A section is suitable for one or more phases. Every garden needs a koeling (a section for koelen).</p></div>
+    <button class="btn" data-act="g-add">Add garden</button></div>
+    <div class="gardens">${D().gardens.map(gardenPanel).join("")}</div>`;
+}
+function gardenPanel(g){
+  const hasKoel = g.sections.some(s => s.phases.includes("koelen")), hasStek = g.sections.some(s => s.phases.includes("stekken"));
+  const total = g.sections.reduce((a, s) => a + s.area, 0), sf = S.ui.secForm && S.ui.secForm.garden === g.id ? S.ui.secForm : null;
+  return `<section class="panel" aria-label="${esc(g.name)}">
+    <div class="panel-h"><div><h2>${esc(g.name)}</h2><span class="hint">${g.sections.length} ${plural(g.sections.length, "section")} · ${fmt(total)} m²</span></div>
+      ${hasKoel ? '<span class="chip">Has a koeling</span>' : '<span class="chip err">Incomplete: no koeling</span>'}</div>
+    <div class="panel-b">
+      ${!hasKoel ? `<p class="msg">Add a koeling before this garden can be used in a schedule.</p>` : ""}
+      ${hasKoel && !hasStek && g.sections.length ? `<p class="hint">No stekkas. Plants for this garden start in the stekkas of garden 1.</p>` : ""}
+      ${g.sections.length ? `<div class="scroll-x"><table class="tbl"><thead><tr><th>Section</th><th class="n">Area</th><th>Suitable for</th><th></th></tr></thead><tbody>
+        ${g.sections.map(s => `<tr${isFlash("s:" + s.id) ? ' class="flash"' : ""}><td>${esc(s.name)}</td><td class="n">${fmt(s.area)} m²</td>
+          <td><div class="phs">${s.phases.map(p => `<span class="chip sm">${p}</span>`).join("")}</div></td>
+          <td style="text-align:right"><button class="btn sm ghost" data-act="sec-del" data-g="${g.id}" data-s="${s.id}" aria-label="Delete ${esc(s.name)}">Delete</button></td></tr>`).join("")}
+      </tbody></table></div>` : `<p class="hint">No sections yet.</p>`}
+      ${sf ? sectionForm(sf, g) : `<div><button class="btn" data-act="sec-new" data-g="${g.id}">Add section</button></div>`}
+    </div></section>`;
+}
+function sectionForm(sf, g){
+  const e = sf.errors;
+  return `<div class="inlineform" id="secform"><h3>New section in ${esc(g.name)}</h3>
+    <div class="grid2">
+      <div class="field"><label for="s-name">Name</label><input class="in${e.name ? " err" : ""}" id="s-name" data-sf="name" value="${esc(sf.name)}" placeholder="e.g. G${g.id.replace(/\D/g, "") || ""} Opkweek 4"><div class="msg">${esc(e.name || "")}</div></div>
+      <div class="field"><label for="s-area">Area</label><div class="pct"><input class="in num${e.area ? " err" : ""}" id="s-area" inputmode="numeric" data-sf="area" value="${esc(sf.area)}" style="width:110px"><span>m²</span></div><div class="msg">${esc(e.area || "")}</div></div>
+    </div>
+    <div class="field"><span class="lbl">Suitable for</span>
+      <div class="checks${e.phases ? " err" : ""}">${PHASES.map(p => `<label class="check"><input type="checkbox" data-sfp="${p}" ${sf.phases.includes(p) ? "checked" : ""}> ${p}</label>`).join("")}</div>
+      <div class="msg">${esc(e.phases || "")}</div></div>
+    <div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn" data-act="sec-cancel">Cancel</button><button class="btn primary" data-act="sec-save">Add section</button></div>
+  </div>`;
+}
+function saveSection(){
+  const sf = S.ui.secForm, g = gardenBy(sf.garden), e = {}, name = sf.name.trim(), area = digits(sf.area);
+  if (!name) e.name = "Enter a name.";
+  else if (g.sections.some(s => s.name.toLowerCase() === name.toLowerCase())) e.name = "This garden already has a section with this name.";
+  if (!area) e.area = "Enter the area in m².";
+  if (!sf.phases.length) e.phases = "Select at least one phase.";
+  sf.errors = e;
+  if (Object.keys(e).length){ render(); const f = document.querySelector("#secform .err"); if (f) f.focus(); return; }
+  const id = "s" + Date.now();
+  g.sections.push({id, name, area, phases: PHASES.filter(p => sf.phases.includes(p)), added: true});
+  D().schedule.state = "outdated"; D().schedule.changed = "Wed 13 Jan 2027, " + clock();
+  S.ui.secForm = null; S.ui.flash = "s:" + id; toast(`Section ${name} added to ${g.name}`); render();
+}
+
+/* weekly actions */
+function viewWeekly(){
+  const w = S.ui.staffWeek, next = w > TODAY_WEEK;
+  const evs = allEvents().filter(e => weekOf(e.date) === w);
+  const days = range(0, 6).map(i => {
+    const date = new Date(+monday(w) + i * DAY), today = sameDay(date, TODAY), past = date < TODAY;
+    return `<section class="day${today ? " today" : ""}${past ? " past" : ""}" aria-label="${DOWL[i]}">
+      <div class="day-h"><b>${DOWL[i]} ${date.getUTCDate()} ${MONL[date.getUTCMonth()]}</b>${today ? '<span class="chip dark sm">Today</span>' : ""}</div>
+      <div class="day-g">${D().gardens.filter(g => g.sections.length).map(g => { const list = evs.filter(e => sameDay(e.date, date) && e.gid === g.id).sort((a, b) => a.pi - b.pi);
+        return `<div class="dg"><span class="eyebrow">${esc(g.name)}</span>${list.length ? list.map(e => { const v = varietyBy(e.b.variety);
+          return `<div class="wa"><b>${evTitle(e)}</b> · ${sw(v.color)} ${fmt(e.plants)} ${esc(v.name)} plants<div class="hint">${esc(evWhere(e))}</div></div>`; }).join("")
+          : `<span class="hint">${today ? "No actions today" : "No actions"}</span>`}</div>`; }).join("")}</div></section>`;
+  }).join("");
+  return `<div class="ph"><div><h1>Weekly actions</h1><p class="hint">Week ${w} · ${weekRange(w)} ${YEAR}</p></div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn sm" data-act="staff-week" data-w="${w - 1}" ${w <= TODAY_WEEK ? "disabled" : ""} aria-label="Previous week">${ICON.left}</button>
+      <div class="seg" role="group" aria-label="Week"><button class="${!next ? "on" : ""}" data-act="staff-week" data-w="${TODAY_WEEK}">This week</button><button class="${next ? "on" : ""}" data-act="staff-week" data-w="${TODAY_WEEK + 1}">Next week</button></div>
+      <button class="btn sm" data-act="staff-week" data-w="${w + 1}" ${w >= TODAY_WEEK + 1 ? "disabled" : ""} aria-label="Next week">${ICON.right}</button></div></div>
+    ${next ? `<div class="banner info"><div><b>Planned actions for next week.</b> These may still change.</div></div>` : ""}
+    <div class="days">${days}</div>`;
+}
+
+/* expected deliveries */
+function viewDeliveries(){
+  const T = D().targets, weeks = Object.keys(T).map(Number).sort((a, b) => a - b);
+  const rows = weeks.filter(w => !S.ui.expShort || expectedFor(w) < T[w].total).map(w => {
+    const t = T[w], e = expectedFor(w), diff = e - t.total, open = !!S.ui.expOpen[w];
+    return `<tr class="click${diff < 0 ? " err" : ""}" data-act="exp-row" data-w="${w}" tabindex="0" aria-expanded="${open}">
+      <td><b>Week ${w}</b></td><td>${weekRange(w)}</td><td class="n">${fmt(t.total)}</td><td class="n">${fmt(e)}</td><td class="n">${diff ? fmt(diff) : "0"}</td>
+      <td>${diff < 0 ? `<span class="chip err">${fmt(-diff)} short</span>` : '<span class="chip">Met</span>'}</td><td class="hint">${open ? "Hide colors" : "Show colors"}</td></tr>
+      ${open ? `<tr><td colspan="7" class="sub"><table class="tbl"><thead><tr><th>Color</th><th class="n">Share</th><th class="n">Target</th><th class="n">Expected</th></tr></thead><tbody>
+        ${COLORS.filter(c => t.pct[c.id]).map(c => { const ct = Math.round(t.total * t.pct[c.id] / 100), ce = Math.round(e * t.pct[c.id] / 100);
+          return `<tr${ce < ct ? ' class="err"' : ""}><td>${sw(c.id)} ${c.name}</td><td class="n">${t.pct[c.id]}%</td><td class="n">${fmt(ct)}</td><td class="n">${fmt(ce)}</td></tr>`; }).join("")}
+      </tbody></table></td></tr>` : ""}`; }).join("");
+  return `<div class="ph"><div><h1>Expected deliveries ${YEAR}</h1><p class="hint">Plants the current schedule will have ready, compared with the target. Click a week to see the colors.</p></div>
+    <label class="check"><input type="checkbox" data-exp="short" ${S.ui.expShort ? "checked" : ""}> Only show weeks with a shortage</label></div>
+    <div class="panel"><div class="scroll-x"><table class="tbl"><thead><tr><th>Week</th><th>Dates</th><th class="n">Target</th><th class="n">Expected</th><th class="n">Difference</th><th>Status</th><th></th></tr></thead>
+    <tbody>${rows || `<tr><td colspan="7" class="hint">No weeks with a shortage.</td></tr>`}</tbody></table></div></div>`;
+}
+
+/* users */
+function viewUsers(){
+  const us = D().users;
+  return `<div class="ph"><div><h1>User management</h1><p class="hint">A user can have several roles. Each role gives access to its own screens.</p></div>
+    <button class="btn primary" data-act="u-new">Add user</button></div>
+    <div class="panel"><div class="scroll-x"><table class="tbl"><thead><tr><th>Name</th><th>Email</th><th>Roles</th><th>Status</th></tr></thead><tbody>
+    ${us.map(u => `<tr class="click${u.active ? "" : " off"}${isFlash("u:" + u.id) ? " flash" : ""}" data-act="u-edit" data-id="${u.id}" tabindex="0">
+      <td><b>${esc(u.name)}</b></td><td>${esc(u.email)}</td><td><div class="phs">${ROLE_ORDER.filter(r => u.roles.includes(r)).map(r => `<span class="chip sm">${ROLE_LABEL[r]}</span>`).join("")}</div></td>
+      <td>${u.active ? "Active" : "Deactivated"}</td></tr>`).join("")}
+    </tbody></table></div></div>`;
+}
+function newUform(u){ return {id: u ? u.id : null, name: u ? u.name : "", email: u ? u.email : "", roles: u ? [...u.roles] : [], active: u ? u.active : true, errors: {}}; }
+function saveUser(){
+  const f = S.ui.uform, e = {}, name = f.name.trim(), email = f.email.trim();
+  if (!name) e.name = "Enter a name.";
+  if (!email) e.email = "Enter an email address.";
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = "Enter a valid email address, like name@grower.example.";
+  else if (D().users.some(u => u.email.toLowerCase() === email.toLowerCase() && u.id !== f.id)) e.email = "There's already an account with this email address.";
+  if (!f.roles.length) e.roles = "Select at least one role.";
+  const otherAdmins = D().users.filter(u => u.id !== f.id && u.active && u.roles.includes("admin")).length;
+  const wasAdmin = f.id && D().users.find(u => u.id === f.id).roles.includes("admin");
+  if (wasAdmin && !otherAdmins && (!f.roles.includes("admin") || !f.active)) e.roles = (e.roles ? e.roles + " " : "") + "There must be at least one active administrator. Give another user the Administrator role first.";
+  f.errors = e;
+  if (Object.keys(e).length){ render(); return; }
+  if (f.id){ Object.assign(D().users.find(u => u.id === f.id), {name, email, roles: ROLE_ORDER.filter(r => f.roles.includes(r)), active: f.active}); S.ui.flash = "u:" + f.id; toast(`Changes to ${name} saved`); }
+  else { const id = "u" + (D().users.length + 1) + Date.now() % 1000; D().users.push({id, name, email, roles: ROLE_ORDER.filter(r => f.roles.includes(r)), active: f.active}); S.ui.flash = "u:" + id; toast(`Account created for ${name}`); }
+  S.ui.drawer = null; S.ui.uform = null; render();
+}
+
+/* drawers */
+function viewDrawer(){
+  const d = S.ui.drawer; if (!d) return "";
+  let h = "", b = "", f = "";
+  if (d.type === "week"){
+    const w = d.w;
+    h = `<div><span class="eyebrow">Space per section</span><h2>Week ${w} · ${weekRange(w)}</h2></div>`;
+    b = D().gardens.filter(g => g.sections.length).map(g => `<div><h3 style="margin-bottom:8px">${esc(g.name)}</h3><div style="display:flex;flex-direction:column;gap:10px">
+      ${g.sections.map(s => { const u = usage(s, w), over = u > s.area, pct = Math.round(u / s.area * 100);
+        return `<div class="use"><div class="use-t"><span>${esc(s.name)}</span><span class="mono${over ? " flag" : ""}">${fmt(u)} / ${fmt(s.area)} m²</span></div>
+          <div class="bar${over ? " over" : ""}"><i style="width:${Math.min(pct, 100)}%"></i></div>${over ? `<span class="flag">${fmt(u - s.area)} m² over capacity</span>` : ""}</div>`; }).join("")}</div></div>`).join("");
+    const over = overSections(w);
+    for (const o of over){
+      const inSec = D().batches.map(bt => ({bt, st: route(bt).steps.find(st => st.sec && st.sec.id === o.sec.id && weekOf(st.start) <= w && weekOf(new Date(+st.end - 1)) >= w)})).filter(x => x.st)
+        .map(x => ({...x, m2: Math.ceil(startedOf(x.bt) / x.st.den)})).sort((a, c) => c.m2 - a.m2).slice(0, 8);
+      b += `<div><h3 style="margin-bottom:6px">Largest batches in ${esc(o.sec.name)} this week</h3>${inSec.length ? `<table class="tbl"><tbody>${inSec.map(x => `<tr class="click" data-act="batch" data-id="${x.bt.id}"><td>${sw(varietyBy(x.bt.variety).color)} ${esc(x.bt.variety)}</td><td class="hint">delivery week ${x.bt.week}</td><td class="n">${fmt(x.m2)} m²</td></tr>`).join("")}</tbody></table>` : '<p class="hint">No sample batches in this section.</p>'}</div>`;
+    }
+  }
+  if (d.type === "batch"){
+    const bt = D().batches.find(x => x.id === d.id), v = varietyBy(bt.variety), r = route(bt), n = startedOf(bt), started = isStarted(bt), edit = has("planner");
+    const cur = r.steps.find(s => s.start <= TODAY && TODAY < s.end);
+    const status = !started ? "Not started yet" : cur ? "In " + PHASES[cur.pi] + " (" + secName(cur.sec) + ")" : "Ready for delivery";
+    h = `<div><span class="eyebrow">Batch</span><h2>${esc(v.name)} · delivery week ${bt.week}</h2></div>`;
+    b = `<dl class="facts"><dt>Color</dt><dd>${sw(v.color)} ${colorOf(v.color).name}</dd><dt>Garden</dt><dd>${esc(gardenBy(bt.garden).name)}${bt.garden !== "1" && pgOf(bt)[0] === "1" ? ' <span class="hint">(stekken in garden 1)</span>' : ""}</dd>
+      <dt>Plants to deliver</dt><dd class="mono">${fmt(bt.deliver)}</dd><dt>Plants started</dt><dd class="mono">${fmt(n)} <span class="hint">(${v.loss}% loss)</span></dd>
+      <dt>Status</dt><dd>${status}</dd>${bt.pg ? '<dt>Note</dt><dd>One or more phases were moved to another garden by the planner.</dd>' : ""}</dl>
+      <div><h3 style="margin-bottom:6px">Route</h3><div class="scroll-x"><table class="tbl"><thead><tr><th>Phase</th><th>Section</th><th>From</th><th class="n">Days</th><th class="n">Space</th><th></th></tr></thead><tbody>
+      ${r.steps.map(s => { const other = D().gardens.find(g => g.id !== s.gid && canHost(g.id, s.pi, v));
+        const canMove = edit && !started && other && s.pi > 0;
+        const ask = S.ui.move && S.ui.move.id === bt.id && S.ui.move.pi === s.pi;
+        return `<tr><td>${PHASES[s.pi]}</td><td>${esc(secName(s.sec))}</td><td>${ddm(s.start)}</td><td class="n">${s.dur}</td><td class="n">${fmt(Math.ceil(n / s.den))} m²</td>
+          <td>${canMove && !ask ? `<button class="btn sm" data-act="move-ask" data-pi="${s.pi}">Move to ${esc(other.name.toLowerCase())}</button>` : ""}</td></tr>
+          ${ask ? moveConfirm(bt, s, other, v) : ""}`; }).join("")}
+      </tbody></table></div>
+      <p class="hint" style="margin-top:6px">Ready on ${ddm(r.ready)}, delivered in week ${bt.week}.${edit && started ? " This batch has already started, so its dates can't be changed." : ""}</p></div>`;
+  }
+  if (d.type === "user"){
+    const uf = S.ui.uform, e = uf.errors;
+    h = `<div><span class="eyebrow">User management</span><h2>${uf.id ? "Edit " + esc(D().users.find(u => u.id === uf.id).name) : "New user"}</h2></div>`;
+    b = `<div class="field"><label for="u-name">Name</label><input class="in${e.name ? " err" : ""}" id="u-name" data-uf="name" value="${esc(uf.name)}"><div class="msg">${esc(e.name || "")}</div></div>
+      <div class="field"><label for="u-email">Email address</label><input class="in${e.email ? " err" : ""}" id="u-email" type="email" data-uf="email" value="${esc(uf.email)}"><div class="msg">${esc(e.email || "")}</div></div>
+      <div class="field"><span class="lbl">Roles</span><div class="checks${e.roles ? " err" : ""}" style="flex-direction:column;gap:10px">
+        ${ROLE_ORDER.map(r => `<label class="check" style="align-items:flex-start"><input type="checkbox" data-ur="${r}" ${uf.roles.includes(r) ? "checked" : ""} style="margin-top:2px"><span><b>${ROLE_LABEL[r]}</b><br><span class="hint">${ROLE_SCREENS[r]}</span></span></label>`).join("")}</div>
+        <div class="msg">${esc(e.roles || "")}</div></div>
+      <label class="check"><input type="checkbox" data-ua="1" ${uf.active ? "checked" : ""}> Account is active <span class="hint">(a deactivated user can't log in)</span></label>`;
+    f = `<button class="btn" data-act="close">Cancel</button><button class="btn primary" data-act="u-save">${uf.id ? "Save changes" : "Create account"}</button>`;
+  }
+  return `<div class="backdrop drawer-wrap" data-act="close-backdrop"><aside class="drawer" role="dialog" aria-modal="true" data-key="${esc(JSON.stringify(d))}">
+    <div class="drawer-h">${h}<button class="btn ghost sm" data-act="close" aria-label="Close">${ICON.close}</button></div>
+    <div class="drawer-b">${b}</div>${f ? `<div class="drawer-f">${f}</div>` : ""}</aside></div>`;
+}
+function moveConfirm(bt, s, other, v){
+  const nd = v.g[other.id].dur[s.pi], diff = s.dur - nd, sec = sectionFor(other.id, s.pi);
+  const effect = diff > 0 ? `The phases before ${PHASES[s.pi]} start ${diff} days later.` : diff < 0 ? `The phases before ${PHASES[s.pi]} start ${-diff} days earlier.` : "The dates stay the same.";
+  return `<tr><td colspan="6"><div class="confirm"><span><b>Move ${PHASES[s.pi]} to ${esc(sec.name)}?</b> This is an exception: the batch normally stays in its own garden.
+    In ${esc(other.name.toLowerCase())}, ${PHASES[s.pi]} takes ${nd} days instead of ${s.dur}. ${effect}</span>
+    <span style="display:flex;gap:8px"><button class="btn sm primary" data-act="move-yes" data-g="${other.id}">Move ${PHASES[s.pi]}</button><button class="btn sm" data-act="move-no">Cancel</button></span></div></td></tr>`;
+}
+
+/* modals */
+function viewModal(){
+  const m = S.ui.modal; if (!m) return "";
+  let h = "", b = "", f = "";
+  if (m.type === "tasks"){
+    h = "<h2>All tasks</h2>";
+    b = `<ul class="tasklist">${TASKS.map((t, i) => `<li><span>${i + 1}. ${esc(t.title)} <span class="hint">· ${ROLE_LABEL[t.role]}</span></span><button class="btn sm" data-act="start-task" data-i="${i}">Start</button></li>`).join("")}</ul>
+      <p class="hint">Starting a task resets the prototype to that task's starting point.</p>`;
+    f = `<button class="btn" data-act="intro">Back to the start screen</button><button class="btn" data-act="close">Close</button>`;
+  }
+  if (m.type === "overwrite"){
+    const ws = m.weeks;
+    h = `<h2>Overwrite existing ${plural(ws.length, "target")}?</h2>`;
+    b = `<p>${ws.length === 1 ? `Week ${ws[0]} already has a target of ${fmt(D().targets[ws[0]].total)} plants.` : `Weeks ${ws.slice(0, -1).join(", ")} and ${ws[ws.length - 1]} already have a target.`} Do you want to replace ${ws.length === 1 ? "it" : "them"} with the new target?</p>`;
+    f = `<button class="btn" data-act="close">Cancel</button><button class="btn" data-act="ow-keep">Keep ${ws.length === 1 ? "week " + ws[0] : "existing weeks"}</button><button class="btn primary" data-act="ow-yes">Overwrite</button>`;
+  }
+  if (m.type === "req"){
+    const c = colorOf(m.color), st = mixState(), colorPlants = st.total ? Math.round(st.total * st.pct[m.color] / 100) : 0;
+    const vs = D().varieties.filter(v => v.color === m.color), dr = S.ui.reqDraft;
+    h = `<div><span class="eyebrow">${weeksLabel(S.ui.tsel.from, S.ui.tsel.to)}</span><h2>${sw(m.color)} ${c.name} varieties</h2></div>`;
+    if (!st.pct[m.color]) { b = `<p>Give ${c.name.toLowerCase()} a percentage first. Then you can ask for a minimum share of a ${c.name.toLowerCase()} variety.</p>`; f = `<button class="btn" data-act="close">Close</button>`; }
+    else if (!vs.length) { b = `<p>There are no ${c.name.toLowerCase()} varieties yet. Add them under Varieties first.</p>`; f = `<button class="btn" data-act="close">Close</button>`; }
+    else {
+      b = `<p class="hint">Optional. Set a minimum share for a variety within the ${fmt(colorPlants)} ${c.name.toLowerCase()} plants. The rest is divided over the other ${c.name.toLowerCase()} varieties.</p>
+        <table class="tbl"><thead><tr><th>Variety</th><th>Minimum</th><th class="n">Plants</th></tr></thead><tbody>
+        ${vs.map(v => `<tr><td>${esc(v.name)}</td><td><span class="pct"><input class="in num" style="width:70px" inputmode="decimal" data-req="${esc(v.name)}" id="rq-${esc(v.name).replace(/\W/g, "")}" value="${esc(dr[v.name] ?? "")}" placeholder="0" aria-label="${esc(v.name)} minimum percentage"><span>%</span></span></td>
+          <td class="n hint" data-reqp="${esc(v.name)}"></td></tr>`).join("")}</tbody></table>
+        <p class="status" id="rq-status"></p>`;
+      f = `<button class="btn" data-act="close">Cancel</button><button class="btn primary" id="rq-done" data-act="req-done">Done</button>`;
+    }
+  }
+  if (m.type === "secdel"){
+    const g = gardenBy(m.g), s = g.sections.find(x => x.id === m.s);
+    const onlyKoel = s.phases.includes("koelen") && g.sections.filter(x => x.phases.includes("koelen")).length === 1;
+    if (onlyKoel){ h = `<h2>${esc(s.name)} can't be deleted</h2>`; b = `<p>Every garden needs a koeling, and ${esc(s.name)} is the only koeling in ${esc(g.name.toLowerCase())}. Add another koeling first.</p>`; f = `<button class="btn primary" data-act="close">OK</button>`; }
+    else { h = `<h2>Delete ${esc(s.name)}?</h2>`; b = `<p>Batches planned in this section get a new place when you generate the schedule again.</p>`; f = `<button class="btn" data-act="close">Cancel</button><button class="btn danger" data-act="sec-del-yes">Delete section</button>`; }
+  }
+  if (m.type === "addgarden"){
+    h = "<h2>Add a garden</h2>";
+    b = `<div class="field"><label for="g-name">Name</label><input class="in${m.err ? " err" : ""}" id="g-name" data-gn="1" value="${esc(m.name || "")}" placeholder="e.g. Garden 7"><div class="msg">${esc(m.err || "")}</div></div>
+      <p class="hint">After adding the garden, add its sections. It needs a koeling before it can be used in a schedule.</p>`;
+    f = `<button class="btn" data-act="close">Cancel</button><button class="btn primary" data-act="g-add-save">Add garden</button>`;
+  }
+  return `<div class="backdrop modal-wrap" data-act="close-backdrop"><div class="modal" role="dialog" aria-modal="true">
+    <div class="drawer-h">${h}<button class="btn ghost sm" data-act="close" aria-label="Close">${ICON.close}</button></div>
+    <div class="drawer-b">${b}</div><div class="drawer-f">${f}</div></div></div>`;
+}
+function reqLive(){
+  const el = document.getElementById("rq-status"); if (!el) return;
+  const st = mixState(), m = S.ui.modal, colorPlants = st.total ? Math.round(st.total * st.pct[m.color] / 100) : 0;
+  let sum = 0;
+  document.querySelectorAll("[data-reqp]").forEach(td => { const p = dec(S.ui.reqDraft[td.dataset.reqp]) || 0; sum += p; td.textContent = p ? "≥ " + fmt(Math.round(colorPlants * p / 100)) : ""; });
+  const bad = sum > 100;
+  el.textContent = bad ? `The minimums add up to ${fmt(sum)}%. Lower them to 100% or less.` : sum ? `Minimums: ${fmt(sum)}% of ${colorOf(m.color).name.toLowerCase()}.` : "";
+  el.className = "status" + (bad ? " bad" : "");
+  document.getElementById("rq-done").disabled = bad;
+}
+
+/* sticky note */
+function viewNote(docked){
+  const t = TASKS[S.task], dk = docked ? " docked" : "";
+  if (!S.panelOpen) return `<div class="note min${dk}"><b>Task ${S.task + 1} of ${TASKS.length}</b><button class="btn sm" data-act="note-toggle">Show task</button></div>`;
+  return `<aside class="note${dk}" aria-label="Test task">
+    <div class="note-h"><span class="eyebrow" style="color:var(--note-ink)">Task ${S.task + 1} of ${TASKS.length} · ${ROLE_LABEL[t.role]}</span><button class="btn sm" data-act="note-toggle">Hide</button></div>
+    <h2>${esc(t.title)}</h2>${t.text}
+    <div class="note-acts"><button class="btn primary" data-act="task-next">${S.task === TASKS.length - 1 ? "Done, finish test" : "Done, next task"}</button>
+      <button class="btn" data-act="task-restart">Restart task</button></div>
+    <button class="linkbtn" style="font-weight:500;font-size:12.5px;align-self:flex-start" data-act="task-list">All tasks</button>
+  </aside>`;
+}
+function viewFreeTab(){ return `<div class="note min"><b>Exploring freely</b><button class="btn sm" data-act="intro">Back to the test</button></div>`; }
+
+/* ------------------------------------------------------------------ actions */
+const clock = () => { const d = new Date(); return String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0"); };
+function landing(){ for (const r of ROLE_ORDER) if (has(r)) return LANDING[r]; return "calendar"; }
+function startTask(i){
+  const t = TASKS[i];
+  S.mode = "task"; S.task = i; S.panelOpen = true; S.ui = freshUi(); loadData(t.setup);
+  S.user = {name: PERSONA[t.role], roles: [t.role]};
+  S.loggedIn = !t.login; if (S.loggedIn) S.screen = landing();
+  render(); window.scrollTo(0, 0);
+}
+function selectWeeks(a, b){
+  a = Math.max(1, Math.min(52, a)); b = Math.max(1, Math.min(52, b));
+  S.ui.tsel = {from: Math.min(a, b), to: Math.max(a, b)}; loadMix(); S.ui.scrollWeek = S.ui.tsel.from;
+}
+function commitTarget(weeks){
+  const st = mixState(), m = S.ui.mix, T = D().targets;
+  const req = {}; for (const [c, r] of Object.entries(m.req)) { const clean = Object.fromEntries(Object.entries(r).filter(([, v]) => dec(v))); if (Object.keys(clean).length && st.pct[c]) req[c] = Object.fromEntries(Object.entries(clean).map(([k, v]) => [k, dec(v)])); }
+  for (const w of weeks) T[w] = {total: st.total, pct: {...st.pct}, req: clone(req)};
+  D().schedule.state = "outdated"; D().schedule.changed = "Wed 13 Jan 2027, " + clock();
+  S.ui.flash = "wk:" + weeks[0]; loadMix();
+  return weeks;
+}
+function compactWeeks(ws){ const out = []; let a = ws[0], p = ws[0];
+  for (const w of ws.slice(1).concat([null])){ if (w === p + 1){ p = w; continue; } out.push(a === p ? String(a) : `${a}–${p}`); a = p = w; }
+  return out.join(", "); }
+
+const ACT = {
+  "start-task": el => startTask(+el.dataset.i),
+  "free": () => { S.mode = "free"; S.ui = freshUi(); loadData(); S.user = {name: "Demo user", roles: ["planner","mgmt","staff","admin"]}; S.loggedIn = true; S.screen = landing(); render(); },
+  "intro": () => { S.mode = "intro"; S.ui = freshUi(); S.loggedIn = false; render(); },
+  "task-next": () => { if (S.task >= TASKS.length - 1){ S.mode = "end"; S.ui = freshUi(); S.loggedIn = false; render(); } else startTask(S.task + 1); },
+  "task-restart": () => startTask(S.task),
+  "task-list": () => { S.ui.modal = {type: "tasks"}; render(); },
+  "note-toggle": () => { S.panelOpen = !S.panelOpen; render(); },
+  "nav": el => { S.screen = el.dataset.id; S.ui.drawer = null; S.ui.secForm = null; if (S.screen === "varieties"){ S.ui.vmode = "view"; } render(); document.getElementById("content")?.scrollTo(0, 0); },
+  "logout": () => { S.loggedIn = false; S.ui = freshUi(); render(); },
+  "generate": () => { S.ui.generating = true; render();
+    setTimeout(() => { const sch = D().schedule; sch.state = "current"; sch.version = 2; sch.generated = "Wed 13 Jan 2027, " + clock(); S.ui.generating = false;
+      DELTA = computeDeltas(); const n = problems(range(1, 26)).length; toast(n ? `Schedule generated. ${n} ${plural(n, "problem")} found.` : "Schedule generated. No problems found."); render(); }, 1300); },
+  "goto-week": el => { S.ui.scrollCol = +el.dataset.w; render(); },
+  "week": el => { S.ui.drawer = {type: "week", w: +el.dataset.w}; S.ui.move = null; render(); },
+  "batch": el => { S.ui.drawer = {type: "batch", id: el.dataset.id}; S.ui.move = null; render(); },
+  "move-ask": el => { S.ui.move = {id: S.ui.drawer.id, pi: +el.dataset.pi}; render(); },
+  "move-no": () => { S.ui.move = null; render(); },
+  "move-yes": el => { const bt = D().batches.find(x => x.id === S.ui.move.id), pi = S.ui.move.pi; bt.pg = pgOf(bt).slice(); bt.pg[pi] = el.dataset.g;
+    if (bt.pg.every((g, i) => g === defaultPG(bt)[i])) bt.pg = null;
+    toast(`${PHASES[pi][0].toUpperCase() + PHASES[pi].slice(1)} of ${bt.variety} moved to ${sectionFor(el.dataset.g, pi).name}`); S.ui.move = null; render(); },
+  "wk": (el, e) => { const w = +el.dataset.w; if (e.shiftKey && S.ui.tsel) selectWeeks(Math.min(S.ui.tsel.from, w), Math.max(S.ui.tsel.to, w)); else selectWeeks(w, w); S.ui.scrollWeek = null; render(); },
+  "save-target": () => { const st = mixState(); if (!st.ok) return; const s = S.ui.tsel, ws = range(s.from, s.to);
+    const existing = ws.filter(w => D().targets[w]);
+    if (ws.length > 1 && existing.length){ S.ui.modal = {type: "overwrite", weeks: existing}; render(); return; }
+    commitTarget(ws); toast(ws.length > 1 ? `Target saved for weeks ${s.from}–${s.to}` : `Target saved for week ${s.from}`); render(); },
+  "ow-yes": () => { const s = S.ui.tsel; commitTarget(range(s.from, s.to)); S.ui.modal = null; toast(`Target saved for weeks ${s.from}–${s.to}`); render(); },
+  "ow-keep": () => { const s = S.ui.tsel, keep = S.ui.modal.weeks, ws = range(s.from, s.to).filter(w => !keep.includes(w)); S.ui.modal = null;
+    if (ws.length){ commitTarget(ws); toast(`Target saved for ${plural(ws.length, "week")} ${compactWeeks(ws)}. ${keep.length === 1 ? "Week " + keep[0] + " kept its" : "Weeks " + compactWeeks(keep) + " kept their"} existing target.`); }
+    else toast("Nothing changed. All selected weeks kept their existing target."); render(); },
+  "req-open": el => { S.ui.modal = {type: "req", color: el.dataset.c}; S.ui.reqDraft = Object.fromEntries(Object.entries(S.ui.mix.req[el.dataset.c] || {}).map(([k, v]) => [k, String(v)])); render(); reqLive(); },
+  "req-done": () => { const c = S.ui.modal.color, clean = Object.fromEntries(Object.entries(S.ui.reqDraft).filter(([, v]) => dec(v)));
+    if (Object.keys(clean).length) S.ui.mix.req[c] = clean; else delete S.ui.mix.req[c];
+    S.ui.modal = null; render(); },
+  "v-sel": el => { S.ui.vsel = el.dataset.name; S.ui.vmode = "view"; S.ui.vform = null; render(); },
+  "v-new": () => { S.ui.vmode = "new"; S.ui.vform = newVform(null); S.ui.focus = "#v-name"; render(); vformTotals(); },
+  "v-edit": () => { S.ui.vmode = "edit"; S.ui.vform = newVform(varietyBy(S.ui.vsel)); render(); vformTotals(); },
+  "v-cancel": () => { S.ui.vmode = "view"; S.ui.vform = null; render(); },
+  "v-save": () => saveVariety(),
+  "g-add": () => { S.ui.modal = {type: "addgarden", name: ""}; S.ui.focus = "#g-name"; render(); },
+  "g-add-save": () => { const m = S.ui.modal, name = (m.name || "").trim();
+    if (!name){ m.err = "Enter a name."; render(); return; }
+    if (D().gardens.some(g => g.name.toLowerCase() === name.toLowerCase())){ m.err = "There's already a garden with this name."; render(); return; }
+    D().gardens.push({id: "g" + Date.now(), name, sections: []}); S.ui.modal = null; toast(`${name} added. Add a koeling before it can be used in a schedule.`); render(); },
+  "sec-new": el => { S.ui.secForm = {garden: el.dataset.g, name: "", area: "", phases: [], errors: {}}; S.ui.focus = "#s-name"; render(); },
+  "sec-cancel": () => { S.ui.secForm = null; render(); },
+  "sec-save": () => saveSection(),
+  "sec-del": el => { S.ui.modal = {type: "secdel", g: el.dataset.g, s: el.dataset.s}; render(); },
+  "sec-del-yes": () => { const m = S.ui.modal, g = gardenBy(m.g), s = g.sections.find(x => x.id === m.s); g.sections = g.sections.filter(x => x.id !== m.s);
+    D().schedule.state = "outdated"; D().schedule.changed = "Wed 13 Jan 2027, " + clock(); S.ui.modal = null; toast(`Section ${s.name} deleted`); render(); },
+  "staff-week": el => { S.ui.staffWeek = +el.dataset.w; render(); },
+  "exp-row": el => { const w = +el.dataset.w; S.ui.expOpen[w] = !S.ui.expOpen[w]; render(); },
+  "u-new": () => { S.ui.uform = newUform(null); S.ui.drawer = {type: "user"}; S.ui.focus = "#u-name"; render(); },
+  "u-edit": el => { S.ui.uform = newUform(D().users.find(u => u.id === el.dataset.id)); S.ui.drawer = {type: "user"}; render(); },
+  "u-save": () => saveUser(),
+  "close": () => closeTop(),
+  "close-backdrop": () => closeTop(),
+};
+function closeTop(){ if (S.ui.modal){ S.ui.modal = null; S.ui.reqDraft = null; } else if (S.ui.drawer){ S.ui.drawer = null; S.ui.uform = null; S.ui.move = null; } render(); }
+
+document.addEventListener("click", e => {
+  const el = e.target.closest("[data-act]"); if (!el) return;
+  const a = el.dataset.act;
+  if (a === "close-backdrop" && e.target !== el) return;
+  if (el.disabled) return;
+  ACT[a] && ACT[a](el, e);
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && (S.ui.modal || S.ui.drawer)) { closeTop(); return; }
+  if ((e.key === "Enter" || e.key === " ") && e.target.matches("tr[data-act]")) { e.preventDefault(); e.target.click(); }
+});
+document.addEventListener("focusin", e => { if (e.target.matches("input.num, .period input")) e.target.select(); });
+document.addEventListener("input", e => {
+  const el = e.target, ds = el.dataset;
+  if (ds.f && S.ui.vform){ const [k, g, i] = ds.f.split(".");
+    if (k === "use") return;
+    if (i != null) S.ui.vform[k][g][+i] = el.value; else S.ui.vform[k] = el.value;
+    if (ds.live) vformTotals(); return; }
+  if (ds.mix && S.ui.mix){ if (ds.mix === "total") S.ui.mix.total = el.value; else S.ui.mix.pct[ds.mix] = el.value; mixLive(); return; }
+  if (ds.req && S.ui.reqDraft){ S.ui.reqDraft[ds.req] = el.value; reqLive(); return; }
+  if (ds.sf && S.ui.secForm){ S.ui.secForm[ds.sf] = el.value; return; }
+  if (ds.uf && S.ui.uform){ S.ui.uform[ds.uf] = el.value; return; }
+  if (ds.gn && S.ui.modal){ S.ui.modal.name = el.value; return; }
+  if (el.id === "l-email"){ S.ui.login.email = el.value; }
+});
+document.addEventListener("change", e => {
+  const el = e.target, ds = el.dataset;
+  if (ds.cal){ S.ui.cal[ds.cal] = el.value; render(); return; }
+  if (ds.f && ds.f.startsWith("use.") && S.ui.vform){ S.ui.vform.use[ds.f.split(".")[1]] = el.checked; render(); vformTotals(); return; }
+  if (ds.f === "color" && S.ui.vform){ S.ui.vform.color = el.value; return; }
+  if (ds.tsel){ const s = S.ui.tsel || {}; const v = digits(el.value);
+    let from = ds.tsel === "from" ? v : (s.from ?? v), to = ds.tsel === "to" ? v : (s.to ?? v);
+    if (from && to && from > to){ if (ds.tsel === "from") to = from; else from = to; }   // keep the field you just typed in
+    if (from && to) { selectWeeks(from, to); render(); } return; }
+  if (ds.sfp && S.ui.secForm){ const p = ds.sfp, ph = S.ui.secForm.phases; if (el.checked) { if (!ph.includes(p)) ph.push(p); } else S.ui.secForm.phases = ph.filter(x => x !== p); return; }
+  if (ds.ur && S.ui.uform){ const r = ds.ur, rs = S.ui.uform.roles; if (el.checked) { if (!rs.includes(r)) rs.push(r); } else S.ui.uform.roles = rs.filter(x => x !== r); return; }
+  if (ds.ua && S.ui.uform){ S.ui.uform.active = el.checked; return; }
+  if (ds.exp){ S.ui.expShort = el.checked; render(); return; }
+});
+document.addEventListener("focusout", e => { if (e.target.dataset.mix === "total" && S.ui.mix){ const n = digits(e.target.value); if (n){ S.ui.mix.total = fmt(n); e.target.value = fmt(n); } } });
+document.addEventListener("submit", e => {
+  if (e.target.id !== "login") return;
+  e.preventDefault();
+  const email = document.getElementById("l-email").value.trim(), pass = document.getElementById("l-pass").value, errs = {};
+  if (!email) errs.email = "Enter your email address.";
+  if (!pass) errs.pass = "Enter your password.";
+  S.ui.login = {email, errors: errs};
+  if (Object.keys(errs).length){ render(); return; }
+  S.loggedIn = true; S.screen = landing(); render();
+});
+
+S = {mode: "intro", task: -1, panelOpen: true, loggedIn: false, user: null, screen: null, data: null, ui: freshUi()};
+loadData();
+render();
+</script>
+
+</body>
+</html>
