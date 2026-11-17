@@ -424,28 +424,36 @@ const PERSONA = {planner:"Ilse Bakker", staff:"Mohammed El Amrani", mgmt:"Joost 
 const TASKS = [
   {title:"Add a new variety", role:"planner", login:true,
    text:`<p>You are the planner at a Phalaenopsis grower. Start by logging in. Any email address and password will work.</p>
-         <p>A new yellow variety, <b>Lima Gold</b> from the <b>Mineral Yellow</b> family, will be grown in garden 1. About <b>12%</b> of its plants are lost during production. Add it to the application.</p>
-         <p>Its growth values for garden 1:</p>
+         <p>Go to the <b>Varieties</b> tab.</p>
+         <p>Add a new <b>Lima Gold</b> variety with the color <b>yellow</b> from the <b>Mineral Yellow</b> family.</p>
+         <p>About <b>12%</b> of its plants are lost during production.</p>
+         <p>Use <b>garden 1</b> with the following values:</p>
          <table><tr><th>Phase</th><th>Days</th><th>Plants/m²</th></tr>
          <tr><td>stekken</td><td class="n">7</td><td class="n">325</td></tr><tr><td>oppotten</td><td class="n">113</td><td class="n">142</td></tr>
          <tr><td>wijder zetten</td><td class="n">45</td><td class="n">90</td></tr><tr><td>koelen</td><td class="n">70</td><td class="n">90</td></tr>
          <tr><td>afkweek</td><td class="n">50</td><td class="n">90</td></tr><tr><td>stokken</td><td class="n">12</td><td class="n">69</td></tr></table>`},
   {title:"Add a section to garden 5", role:"planner",
-   text:`<p>Garden 5 is getting its own stekkas: a new section of <b>300 m²</b> that is only used for <b>stekken</b>. Add it to garden 5.</p>`},
+   text:`<p>Go to the <b>Gardens</b> tab.</p> <p>Add a new <b>section</b> to <b>Garden 5</b> with the name <b>G5 Stekkas</b> with an area of <b>300 m²</b> that is suitable for <b>stekken</b>.</p>`},
   {title:"Enter the Mother's Day target", role:"planner",
-   text:`<p>For Mother's Day the grower wants <b>75,000 plants per week</b> in <b>weeks 18 and 19</b>: <b>30% pink</b>, <b>40% white</b> and <b>30% violet</b>. Enter this in the plan.</p>`},
+   text:`<p>Go to the <b>Targets</b> tab.</p><p>For Mother's Day in <b>weeks 18 and 19</b> the grower wants <b>75,000 plants per week</b> with the color split: <b>30% pink</b>, <b>40% white</b> and <b>30% violet</b>.<p>Enter this in the plan.</p>`},
   {title:"Request a specific variety", role:"planner",
    setup(d){ for (const w of [18,19]) d.targets[w] = {total:75000, pct:{white:40, yellow:0, orange:0, pink:30, violet:30, spotty:0}, req:{}}; },
-   text:`<p>A customer wants <b>at least half</b> of the pink plants in <b>week 18</b> to be the variety <b>Beaution</b>. Make sure the plan takes this into account.</p>`},
+   text:`<p>Go to the <b>Targets</b> tab.</p><p>For <b>week 18</b> a customer wants <b>atleast half</b> of the <b>pink plants</b> to be the variety <b>Beaution</b>.</p>
+   <p>Make sure the plan takes this into account.</p>`},
   {title:"Check the schedule", role:"planner",
    setup(d){ d.schedule = {state:"outdated", version:1, generated:"Tue 12 Jan 2027, 14:32", changed:"Wed 13 Jan 2027, 09:12"}; },
-   text:`<p>Some targets were changed this morning. Make sure the schedule is up to date. Then find out whether there are any problems.</p><p>If there are: what is the problem, where, and in which week?</p>`},
+   text:`<p>Some targets were changed this morning. <b>Generate a new schedule</b>. Then find out whether there are any problems.</p>
+   <p>If there are any problems describe them.`},
   {title:"Today's work", role:"staff",
-   text:`<p>You work on the production floor. Today is <b>Wednesday 13 January 2027</b>.</p><p>What has to be done in <b>garden 1 today</b>? And is anything planned for <b>garden 5 next week</b>?</p>`},
+   text:`<p>You work on the production floor. Today is <b>Wednesday 13 January 2027</b>.</p>
+   <p>What has to be done in <b>garden 1 today</b>?</p>
+   <p>Is anything planned for <b>garden 5 next week</b>?</p>`},
   {title:"Answer a customer", role:"mgmt",
-   text:`<p>You work in sales. A customer asks whether the grower can deliver <b>85,000 plants in week 20</b>.</p><p>Find out what you can tell them.</p>`},
+   text:`<p>You work in sales.</p><p> A customer asks whether the grower can deliver <b>85,000 plants</b> in <b>week 20</b>.</p>
+         <p>Go to <b>Expected deliveries</b> and find out what you can tell them.</p>`},
   {title:"Add a colleague", role:"admin",
-   text:`<p>You manage the user accounts. <b>Sanne de Vries</b> (sanne@grower.example) starts next week as a <b>planner</b>. She will also help you <b>manage the accounts</b>.</p><p>Create her account.</p>`},
+   text:`<p>You manage the user accounts. A new employee starts next week.</p>
+         <p>Create an account for <b>Sanne de Vries</b> (<b>sanne@grower.example</b>) with the roles <b>Planner</b> and <b>Administrator</b>.</p>`},
 ];
 
 /* ------------------------------------------------------------------ state */
